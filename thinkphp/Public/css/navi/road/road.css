@@ -1,0 +1,17 @@
+.roadcont {width:1004px;margin:0 auto;clear:both;background:#fff;}
+.roadbaner {float:left;margin-bottom:1px;}
+.roadtit {margin:0 auto;clear:both;clear:both;}
+.roadul1 {width:976px;margin:0 auto;clear:both;margin-top:9px;}
+.roadul1 ul li {float:left;width:976px;height:175px;background:url(../../../img/play/roadtabg.gif) no-repeat;margin-bottom:12px;}
+.roadul1 .lpic1 {float:left;width:202px;height:149px;background:url(../../../img/play/roadpicbg.gif) no-repeat;margin:12px 28px 0 18px;display:inline;}
+.roadul1 .lpic1 img {padding:9px 12px 14px 10px;}
+.roadul1 .rtxt1 {float:left;width:703px;margin:25px 25px 25px 0;display:inline;}
+.roadul1 .rtxt1 h3 {font:bold 14px "宋体";color:#035434;padding-bottom:8px;}
+.roadul1 .rtxt1 h3 a,.roadul1 .rtxt1 h3 a:visited {color:#035434;}
+.roadul1 .rtxt1 h3 a:hover {color:#FE3E0B;text-decoration:underline;}
+.roadul1 .rtxt1 p {margin:0 auto;clear:both;font:normal 14px/22px "宋体";color:#5c5c5c;}
+.roadpage {float:right;clear:both;margin:10px 20px 0 0;display:inline;}
+.roadpage p {float:left;padding:2px 7px 1px 7px;border:1px solid #a5bdd5;margin-left:8px;}
+.roadpage p a,.roadpage p a:visited {color:#1110cd;}
+.roadpage p a:hover {color:#FE3E0B;text-decoration:underline;}
+.roadpage .cur {float:left;padding:0;border:0;font:bold 12px/30px "宋体";margin-left:8px;color:#000;}

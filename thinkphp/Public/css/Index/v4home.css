@@ -1,0 +1,628 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #F6F6F6;
+    font-family: 'Microsoft yahei', '微软雅黑';
+}
+
+
+
+.top-focus>ul>li img{
+    width: 100%;
+    height: 100%;
+}
+.top-focus {
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
+    background: #ccc;
+    position: relative;
+    border: none;
+}
+
+.slider ul li img {
+    border: none;
+    vertical-align: middle;
+}
+
+
+
+/*玩在成都*/
+.in-chengdu-title{
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 0 10px #E2E2E2;
+}
+
+.title-body{
+    width: 475px;
+    height: 60px;
+    background: url("../img/v4home.png") 5px -3px no-repeat;
+    margin: 0 auto;
+}
+/*今日关注*/
+.v2-day-top{
+    width:  1210px;
+    margin: 0 auto;
+}
+.v2-day-top-tools{
+    height: 30px;
+    margin-bottom: 15px;
+}
+.day-top-title{
+    width: 100px;
+    height: 30px;
+    float: left;
+    background: #3882FF;
+    color: #ffffff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.day-top-dot_arrow{
+    float: right;
+    line-height: 30px;
+    cursor: pointer;
+}
+.day-top-prev,.day-top-next{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background:  url("../img/v4home.png") no-repeat;
+
+    font-size: 32px;
+    line-height: 32px;
+    text-indent: -100px;
+    overflow: hidden;
+}
+.day-top-prev{ background-position:  -3px -280px; }
+.day-top-next{ background-position:  -93px -280px; }
+.day-top-dots{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #DCDADB;
+    font-size: 10px;
+    margin: 0 2px;
+    text-indent: -100px;
+    overflow: hidden;
+}
+.day-top-dots.active{
+    background: #3980FF;
+}
+
+
+
+
+.day-top-warp{
+    height: 273px;
+    width: 1130px;
+    margin: 30px auto;
+}
+.day-top-warp .hot-thumb,.day-top-warp .hot-thumb img{
+    display: block;
+    width: 490px;
+    height: 273px;
+    float: left;
+}
+
+.hot-body{
+    width: 610px;
+    float: right;
+}
+.hot-body .title{
+    font-size: 28px;
+    line-height: 50px;
+}
+
+.hot-body .intro{
+    color: #C2C2C2;
+    height: 125px;
+    line-height: 25px;
+    overflow: hidden;
+}
+.share-bar{
+    text-align: right;
+}
+.v-detail{
+    padding: 0 15px;
+    height: 35px;
+    margin-top: 3px;
+    line-height: 37px;
+    background: #CCC;
+    display: inline-block;
+    float: right;
+}
+
+#bdshare{
+    float: right !important;
+}
+
+
+
+/*高端访谈*/
+.interview.m{
+    width: 1210px;
+    margin-top: 15px;
+    height: 150px;
+    position: relative;
+}
+.interview_logo{
+    width: 90px;
+    height: 150px;
+    background: red url("../img/v4home.png") no-repeat -4px -320px ;
+    float: left;
+}
+.interview.m .warp{
+    width: 1060px;
+    height: 95px;
+    padding-top: 27px;
+    float: left;
+}
+.interview.m .warp .iv-item{
+    float: left;
+    width: 500px;
+    margin-left: 30px;
+}
+.iv-item .iv-thumb{
+    float: left;
+    width: 125px;
+    height: 95px;
+}
+.iv-item .title{
+    font-size: 20px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 35px;
+}
+.iv-item .intro{
+    color: #999;
+}
+.iv-item .iv-body{
+    float: left;
+    margin-left: 15px;
+    width: 359px;
+}
+
+.interview.m .more{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    right: -15px;
+    border: 15px solid #F6F6F6;
+    border-bottom: none;
+    border-left: 0;
+    background: #F6F6F6  url("../img/v4home.png") no-repeat -161px -279px;
+}
+
+.day-top-slider{
+    height: 340px;
+}
+
+
+/*玩在成都*/
+.in-chengdu-head{
+    width: 1210px;
+    height: 58px;
+    margin: 15px auto;
+}
+
+.in-chengdu-logo{
+    width: 145px;
+    height: 58px;
+    background:   url("../img/v4home.png") no-repeat -161px -367px ;
+    float: left;
+}
+
+
+.in-chengdu-type{
+    float: left;
+    width: 58px;
+    height: 58px;
+    margin: 0 10px;
+    background:   url("../img/v4home.png") no-repeat -4px -147px;
+    cursor: pointer;
+
+}
+
+
+.in-chengdu-thumb{
+    height: 58px;
+    width: 470px;
+    background: url("../img/v4home.png") no-repeat -4px -473px;
+    float: left;
+    margin-left: 15px;
+}
+
+
+
+.in-cd-chi{ background-position: -4px -147px;}
+.in-cd-chi:hover,.in-cd-chi.active{ background-position: -4px -208px;}
+
+.in-cd-zhu{ background-position: -76px -147px;}
+.in-cd-zhu.active,.in-cd-zhu:hover{ background-position: -76px -208px;}
+
+.in-cd-xing{ background-position: -150px -147px;}
+.in-cd-xing.active,.in-cd-xing:hover{ background-position: -150px -208px;}
+
+.in-cd-you{ background-position: -223px -147px;}
+.in-cd-you.active,.in-cd-you:hover{ background-position: -223px -208px;}
+
+.in-cd-gou{ background-position: -296px -147px;}
+.in-cd-gou:hover,.in-cd-gou.active{ background-position: -296px -208px;}
+
+.in-cd-yu{ background-position: -370px -147px;}
+.in-cd-yu:hover,.in-cd-yu.active{ background-position: -370px -208px;}
+
+
+/*   */
+.v2-doc-body{
+    width: 1210px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 380px;
+    margin-bottom: 15px;
+}
+.v2-doc-body>ul>li{
+    overflow: hidden;
+}
+.v2-doc-item{
+    height: 340px;
+    width: 245px;
+    padding: 20px;
+    background: #FFF;
+    float: left;
+    margin-right: 20px;
+}
+.v2-doc-thumb{
+    display: block;
+    width: 245px;
+    height: 165px;
+
+}
+
+.v2-dov-title{
+    display: block;
+    font-size: 18px;
+    line-height: 42px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 245px;
+    overflow: hidden;
+}
+
+
+.v2-doc-intro{
+    height: 90px;
+    line-height: 23px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #999;
+}
+.doc-detail-icon{
+    float: right;
+    display: block;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    text-indent: -1000px;
+    background:  url('../img/v4home.png') no-repeat -233px -287px ;
+}
+
+
+/*网页中部焦点图*/
+.cen_focus{
+    width: 100%;
+    min-width: 1210px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.in-chengdu-title.lvyou .title-body{
+    background-position:  5px -65px;
+}
+
+/*旅游成都*/
+.ly-chengdu-body{
+    width: 1210px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/*发现新美景*/
+.v2-beauty{
+    width: 385px;
+    height: 435px;
+}
+.v2-cat_thumb-box,.v2-cat_thumb-box img{
+    width: 385px;
+    height: 235px;
+    background: #ccc;
+    border-radius: 10px;
+}
+.v2-cat_thumb-box{
+    overflow: hidden;
+    position: relative;
+}
+.v2-cat_thumb-box>ul>li{
+    float: left;
+}
+
+
+.beauty-icon{
+    position: absolute;
+    width: 145px;
+    height: 84px;
+    background:  url('../img/v4home.png') no-repeat 5px -520px;
+    z-index: 100;
+    top: 15px;
+    left: 15px;
+}
+.ecotourisms-icon{
+    position: absolute;
+    width: 160px;
+    height: 84px;
+    background:  url('../img/v4home.png') no-repeat 5px -654px;
+    z-index: 100;
+    top: 15px;
+    left: 15px;
+}
+
+.culturals-icon{
+    width: 186px;
+    height: 51px;
+    background: url('../img/v4home.png') no-repeat 5px -604px;
+    z-index: 100;
+    margin: 12px;
+    overflow: hidden;
+}
+
+
+.v2-cat-box{
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+.v2-culturals{
+    margin: 0 20px;
+}
+.v2-cat_thumb-box .dots{
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    right: 15px;
+}
+.v2-cat_thumb-box .dots .box-dots{
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-indent: -110px;
+    width: 12px;
+    height: 12px;
+    background: #FFF;
+}
+.v2-cat_thumb-box .dots .box-dots.active{
+    background: #F77819;
+}
+
+
+.v2-cat_content-box{
+    height: 195px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 385px;
+}
+.v2-cat_content-box>ul{
+    margin: 15px;
+    color: #FFF !important;
+    line-height: 25px;
+}
+.v2-cat_content-box>ul a{
+    color: #FFF !important;
+    font-size: 18px;
+    line-height: 40px;
+    display: block;
+    height: 40px;
+    width: 356px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+.v2-cat_content-box>ul>li{
+    height: 163px;
+    overflow: hidden;
+}
+.v2-culturals .v2-cat_content-box>ul>li{
+    height: 100px;
+}
+
+.v2-beauty .v2-cat_content-box,
+.v2-ecotourism .v2-cat_content-box
+{
+    margin-top: 5px;
+}
+.v2-culturals .v2-cat_content-box{
+    margin-bottom: 5px;
+    background: #FFBB00;
+    overflow: hidden;
+    position: relative;
+}
+.v2-beauty .v2-cat_content-box{
+    background: #62B90C;
+}
+.v2-ecotourism .v2-cat_content-box {
+    background: #3882FF;
+}
+
+
+.v2-culturals .v2-cat_content-box .dots{
+    position: absolute;
+    z-index: 100;
+    top: 20px;
+    right: 15px;
+}
+.v2-culturals .v2-cat_content-box .dots .box-dots{
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-indent: -110px;
+    width: 12px;
+    height: 12px;
+    background: #FFF;
+}.v2-culturals .dots .box-dots.active{
+     background: #F77819;
+ }
+
+.lines-box,.video{
+     box-shadow:5px 5px 10px 0px rgba(202,202,202,.5);
+ }
+
+
+
+
+ /*三角*/
+.sanjiao{
+    width: 45px;
+    height: 30px;
+    background: url("../img/v4home.png" ) no-repeat ;
+    position: absolute;
+    z-index: 1111;
+}
+ .v2-beauty .sanjiao{
+    background-position: -21px -1193px;
+     top: 210px;
+     left: 20px;
+ }
+.v2-culturals .sanjiao{
+    background-position: -94px -1193px;
+    top: 195px;
+    left: 20px;
+}
+.v2-ecotourism .sanjiao{
+    background-position: -161px  -1193px;
+    top: 210px;
+    left: 20px;
+}
+.video{
+    height: 240px;
+    width: 385px;
+    float: left;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.video img{
+    width: 385px;
+    height: 240px;
+    border-radius: 10px;
+}
+.video-icon{
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background:  url('../img/v4home.png') no-repeat -230px -585px;
+    z-index: 100;
+    top: 15px;
+    left: 15px;
+}
+.video .title{
+    position: absolute;
+    width: 100%;
+    text-indent: 1em;
+    overflow: hidden;
+    bottom: 0;
+    z-index: 10;
+    left: 0;
+    height: 40px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    background: rgba(202,202,202,.6);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.lines-box{
+    height: 240px;
+    width: 790px;
+    border-radius: 10px;
+    margin-right: 20px;
+    float: left;
+    margin-top: 20px;
+    background: #ffffff;
+}
+
+.lines-focus{
+    width: 385px;
+    height: 240px;
+    float: left;
+    margin-right: 20px;
+}
+.lines-focus img{
+    width: 385px;
+    height: 240px;
+}
+
+.top-lines{
+    width: 370px;
+    float: left;
+    line-height: 33px;
+}
+.top-lines a{
+    font-size: 16px;
+}
+.top-lines .item{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.line-icon{
+    width: 152px;
+    height: 42px;
+    background:  url('../img/v4home.png') no-repeat -230px -530px;
+}
+
+
+
+/*好玩四川*/
+.v2-sichuan-head{
+    height: 45px;
+    line-height: 45px;
+    width: 1210px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.v2-sichuan-logo{
+    display: block;
+    float: left;
+    background: url('../img/v4home.png') no-repeat -225px -653px;
+    height: 45px;
+    width: 150px;
+    text-indent: -1000px;
+    overflow: hidden;
+}
+.v2-sichuan-head,.v2-sichuan-head a{
+    color: #999;
+}
+.v2-sichuan{
+    width: 1210px;
+    height: 380px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+
+
+

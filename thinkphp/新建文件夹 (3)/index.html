@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery二级导航菜单插件21CN官网导航菜单样式</title>
+<meta name="description" content="jquery导航菜单插件制作21CN官网二级导航菜单样式，鼠标滑过导航条显示二级菜单导航，鼠标离开或点击导航条二级菜单隐藏。" />
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;text-decoration:none;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+/*--header--*/
+.headerbg{height:42px;margin-bottom:12px;background:#efefef url(images/topbar.gif) repeat-x 0 0;border-top:solid 1px #ddd;margin:40px 0 0 0;}
+#header{height:42px;width:620px;margin:0 auto;}
+#header .logo{float:left;display:block;margin-top:2px;width:36px;height:36px;overflow:hidden;}
+#nav{float:right;font-size:16px;font-family:"微软雅黑","宋体";}
+#nav a:hover{text-decoration:none}
+#nav .nav-item,#nav .nav-link{position:relative;float:left;display:block;color:#444;z-index:1000;}
+#nav .nav-link{height:40px;margin-left:-1px;line-height:40px;font-weight:700;border:1px solid #dadada;border-top-color:#efefef;border-bottom:none;z-index:999;width: 59px;text-align:center;}
+#nav .hover .nav-link{white-space:nowrap;border-bottom:1px solid #fff;color:#ca0000;background:#fbfbfb}
+#nav .nav-dropdown{display:none;position:absolute;top:41px;left:-1px;width:480px;height:290px;border:1px solid #dadada;border-bottom:5px solid #c2c2c2;background:#fff;box-shadow:0 1px 6px rgba(0, 0, 0, 0.2);z-index:998}
+#nav .nav-dropdown-align-right{left:auto;right:0;_right:-1px}
+#nav .nav-dropdown-trending{float:left;width:380px;font-size:16px}
+#nav .nav-dropdown-channel{float:right;width:100px;height:290px;font-size:14px;background:#f6f6f6}
+#nav .nav-dropdown a:hover{color:#ca0000}
+#nav .trending li{height:50px;line-height:50px;font-weight: 700;border-bottom:1px dashed #ccc;vertical-align:bottom;overflow:hidden}
+#nav .trending li a{display:block;padding-left:25px;color:#1E1E1E;}
+#nav .trending li a:hover{background:#f6f6f6}
+#nav .nav-dropdown-entry{line-height:34px;margin-left:25px;font-size: 14px;}
+#nav .nav-dropdown-entry a{display:inline-block;color:#b20000}
+#nav .channel{margin-top:16px}
+#nav .channel li{line-height:2em}
+#nav .channel li a{height:30px;padding-left:24px;line-height:30px;color:#6d6d6d}
+</style>
+</head>
+<body>
+
+<div class="headerbg">
+	<div id="header">
+		<a class="logo" href="http://www.17sucai.com/"><img width="36" height="36" src="images/chinaz_logo.png" /></a>
+		<!--导航-->
+		<ul id="nav">
+			<li class="nav-item">
+				<a href="http://www.17sucai.com/" class="nav-link">新闻</a>
+				
+			</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">军事</a>
+			
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">财经</a>
+			
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">娱乐</a>
+			
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">体育</a>
+			
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">科技</a>
+			
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">汽车</a>
+			
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">房产</a>
+			
+			</div>
+		</li>
+		<li class="nav-item"><a href="http://www.17sucai.com/" class="nav-link">游戏</a>
+			
+		</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.fn.dropdown = function(settings){
+		var defaults = {
+			dropdownEl: '.dropdown-menu',
+			openedClass: 'dropdown-open',
+			delayTime: 100
+		}
+		var opts = $.extend(defaults, settings);
+		return this.each(function(){
+			var curObj = null;
+			var preObj = null;
+			var openedTimer = null;
+			var closedTimer = null;
+			$(this).hover(function(){
+				if(openedTimer)
+				clearTimeout(openedTimer);
+				curObj = $(this);
+				openedTimer = setTimeout(function(){
+					curObj.addClass(opts.openedClass).find(opts.dropdownEl).show();
+				},opts.delayTime);
+				preObj = curObj;
+			},function(){
+				if(openedTimer)
+				clearTimeout(openedTimer);
+				openedTimer = setTimeout(function(){
+					preObj.removeClass(opts.openedClass).find(opts.dropdownEl).hide();
+				},opts.delayTime);
+			});
+			//点击事件关闭菜单
+			$(this).bind('click', function(){
+				if(openedTimer)
+				clearTimeout(openedTimer);
+				openedTimer = setTimeout(function(){
+					preObj.removeClass(opts.openedClass).find(opts.dropdownEl).hide();
+				},opts.delayTime);
+			});
+		});
+	};
+})(jQuery);
+
+//下拉菜单
+$(document).ready(function(){
+	$('#nav .nav-item').dropdown({
+		dropdownEl:'.nav-dropdown',
+		openedClass:'hover'
+	});
+});
+</script>
+
+</body>
+</html>

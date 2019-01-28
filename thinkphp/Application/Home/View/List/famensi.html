@@ -1,0 +1,269 @@
+	
+		
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="keywords"  />
+<title>
+	绿友门户网站
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;IE9" />
+<link href="__PUBLIC__/css/List/index.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/List/style.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" type="text/css" href="css/jquery.tmailsilder.v2.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
+<script language="JavaScript">
+    function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6. 
+    {
+        var arVersion = navigator.appVersion.split("MSIE")
+        var version = parseFloat(arVersion[1])
+        if ((version >= 5.5) && (document.body.filters)) {
+            for (var j = 0; j < document.images.length; j++) {
+                var img = document.images[j]
+                var imgName = img.src.toUpperCase()
+                if (imgName.substring(imgName.length - 3, imgName.length) == "PNG") {
+                    var imgID = (img.id) ? "id='" + img.id + "' " : ""
+                    var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+                    var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+                    var imgStyle = "display:inline-block;" + img.style.cssText
+                    if (img.align == "left") imgStyle = "float:left;" + imgStyle
+                    if (img.align == "right") imgStyle = "float:right;" + imgStyle
+                    if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+                    var strNewHTML = "<span " + imgID + imgClass + imgTitle
+             + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+             + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+             + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+                    img.outerHTML = strNewHTML
+                    j = j - 1
+                }
+            }
+        }
+    }
+    window.attachEvent("onload", correctPNG); 
+</script>
+<script language="javascript">
+    function tabChange(obj, id) {
+        var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
+        var arrayul = document.getElementById(id).getElementsByTagName("ul"); //获取ul数组
+        for (i = 0; i < arrayul.length; i++) {
+            if (obj == arrayli[i]) {
+                arrayli[i].className = "cli";
+                arrayul[i].className = "";
+            }
+            else {
+                arrayli[i].className = "";
+                arrayul[i].className = "hidden";
+            }
+        }
+    }
+</script>
+
+<script src="__PUBLIC__/js/List/jquery.easing.1.3.js" type="text/javascript"></script>
+<link href="__PUBLIC__/css/List/sexylightbox.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/js/List/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        SexyLightbox.initialize({ color: 'white', dir: 'images' });
+    });
+</script>
+<script type='text/javascript' src='__PUBLIC__/js/List/jquery.dcmegamenu.1.3.2.js'></script>
+
+<link rel="stylesheet" href="__PUBLIC__/css/List/globle_cn.css" type="text/css" /><link rel="stylesheet" href="css/globle_cn_ie6.css" type="text/css" />
+
+
+  <script>
+      $(document).ready(function () {
+
+          $('.nav li').hover(
+		function () {
+		    //show its submenu
+		    $(".menuitempanel", this).slideDown(100);
+		    $("#menuhover", this).addClass("head_hover_bg");
+		    $("#menuhover span", this).addClass("head_hover_bg");
+		},
+		function () {
+		    //hide its submenu
+		    $(".menuitempanel", this).slideUp(100);
+		    $("#menuhover", this).removeClass("head_hover_bg");
+		    $("#menuhover span", this).removeClass("head_hover_bg");
+		}
+	);
+      });
+</script>
+<style>
+#ds-thread  {padding:5px;}
+#ds-thread {margin-left:180px;width:900px;}
+
+
+</style>
+
+</head>
+<body>
+ <!--网页导航-->
+        <div class="head-nav">  
+    <div style="padding-top:5px">
+<include file="Public/navi" />
+
+
+    </div>
+      </div>
+        <!--网页导航 结束-->  
+    <form method="post" action="jqjd_xx.aspx?moduleid=92&amp;id=142" id="form1">
+
+<div id="contenter">
+		<div id="main2-2">
+			<div style="margin-top:0px;color:white;font-size:5px">111</div>
+	<div style="border:1px solid rgb(173, 207, 242);padding-left:10px;width:960px;margin:0px auto 10px">
+		<include file="Public/navi3" />	
+		</div>
+		<div style="margin-left:30px;">
+		<include file="Public/navi2" />
+		</div>
+			<div class="con18right"> 
+<h3>法门寺</h3> 
+<ul> 
+<li><span>地址：</span>陕西省宝鸡市扶风县法门镇</li> 
+<li><span>门票：</span>免费</li> 
+<li><span>电话：</span>028-83770770</li> 
+</ul> 
+</div> 
+<div class="clear"></div> 
+<div class="con19"> 
+<div class="tabbox"> 
+<div class="tabmenu"> 
+<ul> 
+<li onclick="tabChange(this,'tabcontent')" class="cli" style="cursor:hand">简介</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">景点</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">推荐</li> 
+</ul> 
+</div> 
+<div id="tabcontent"> 
+<ul name="tabul"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>法门寺（Famen Temple）位于炎帝故里、青铜器之乡——宝鸡市，2004年被联合国教科文组织评为“世界第九大奇迹”，全国重点文物保护单位。地处陕西省宝鸡市扶风县法门镇。始建于东汉末年恒灵年间，约有1700多年历史，有“关中塔庙始祖”之称，周魏以前称作“阿育王寺”，隋文帝时改称“成实道场”，唐高祖时改名“法门寺”。法门寺被誉为皇家寺庙，因安置释迦牟尼佛指骨舍利而成为举国仰望的佛教圣地。法门寺佛塔被誉为“护国真身宝塔”。寺庙所在的法门寺文化景区为国家AAAAA级旅游景区。</p>
+<p>宝鸡法门寺地宫其出土了释迦牟尼佛指骨舍利、铜浮屠、八重宝函、银花双轮十二环锡杖等佛教至高宝物，法门寺珍宝馆拥有出土于法门寺地宫的两千多件大唐国宝重器，为世界寺庙之最。2014年10月第27届世界佛教徒联谊会在宝鸡法门寺举行。</p>
+</div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>一.真身宝塔</p> 
+<p>真身宝塔因塔下藏有佛祖真身舍利而得名，初为“圣冢”，唐代建四级木塔，明代改建砖塔。此塔见于典籍记载，均称其为“古塔四层”、“木塔四层”，金人称其“三级风檐压鲁地，九盘轮相壮秦川”。
+1981年8月24日明塔的一半崩塌，剩下半壁残塔。1987年春发掘出唐代塔基，证实其为正方形，边长26米，木结构，有4根承重柱，20个回廓柱，楼阁式结构。四道流水屋檐，有高拱飞翘的重檐。参照碑铭的描写，可推知它的构造与地宫出土的铜浮屠相仿佛。1988年四月按坍塌前的明塔实测图施工复原，以钢筋水泥为骨架，青砖砌色而成。形状与明塔相同，八卦定向，十三级，四十七米高，雄伟壮观。塔内还修建了平台供游人登高眺望。</p>
+<p>二.法门寺地宫</p>
+<p>从大殿向南，奇峰怪石林立，从大殿向东眺望，在一道道莽莽苍苍的松梁上巍然屹立着一座白色巨石，俗称“麦垛石”。麦垛石是一巨大花岗片麻岩断块，高约60米，周圆30米许，呈圆柱体。若在晴朗的傍晚，夕阳余辉将石体照耀通红。此时晚山含黛，唯麦垛石光彩夺目，分外妖娆。</p>
+<p>法门寺佛学院</p>
+<p>法门寺佛学院是西北地区唯一一所汉传佛教高等院校，2004年11月在方丈学诚法师主持下筹建运行。2010年5月，国家宗教事务局正式批准为本科学制，另特设三年制研究生班。学院秉持“志、道、德、才、学”的办学方针，吸取传统丛林培养僧才的经验精华，借鉴现代学院教育的规范化、标准化，培养解行并重的优秀僧才。</p>
+<p>法门寺博物馆</p>
+<p>法门寺博物馆又称法门寺珍宝馆，陈列大厅设在珍宝阁二、三层内。设有陈列《法门寺出土文物展》，展出文物160多件，全部是地宫出土的文物精品，为唐皇室文物精华的集群性陈列，另外还在地宫设有《地宫珍宝展》。</p>
+<p>法门寺合十舍利塔</p>
+<p>法门寺合十舍利塔始建于2004年，由台湾著名建筑设计大师李祖原策划设计。塔高148米，呈双手合十状，中间有安放佛指舍利的宝塔型建筑，塔内供奉着举世闻名的佛祖释迦牟尼真身舍利。舍利塔总投资超过五十亿人民币。总建筑面积为76690平方米，其中地上为60225平方米，地下约为16465平方米。2009年3月29日，佛教圣地法门寺合十舍利塔落成。2009年5月9日举行佛指舍利安奉大典。</p>
+<p>佛光大道</p>
+<p>佛光大道长1230米，宽108米，1代表这里供奉着世界上唯一释迦摩尼指骨舍利，2代表新旧两座宝塔，3就是代表佛法僧三宝的设计规划，而0就是万物一切所有的众生。而108呢，比如说法师手持的念珠就是108颗，每拨去一颗佛珠就代表看破放下一种烦恼。</p>
+
+<div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>推荐一：法门寺一日游</p>
+<p>真身宝塔 -法门寺地宫 -法门寺佛学院 -法门寺博物馆 -法门寺合十舍利塔-佛光大道</p>
+<p>法门寺属于一日游景点建议跟旅行社会有更好的体验</p>
+</div> 
+</ul> 
+</div> 
+</div> 
+</div> 
+<div class="con21"> 
+<h3><span>电子地图</span></h3> 
+<h4> 
+<div style="width: 99%; height: 235px; border: 1px solid gray" id="container"></div> 
+
+</h4> 
+</div> 
+<div class="con20"> 
+<h3><span>图集</span></h3> 
+<h4> 
+<a><img src="__PUBLIC__/img/famen/famen9.jpg" /></a>
+<a><img src="__PUBLIC__/img/famen/famen13.jpg" /></a>
+<a><img src="__PUBLIC__/img/famen/famen15.jpg" /></a>
+<a><img src="__PUBLIC__/img/famen/famen6.jpg" /></a>
+</h4> 
+</div> 
+			</div>
+		</div>
+		
+		
+		
+		
+		
+	</div>
+
+<include file="List/comment" />
+
+
+	
+		
+	
+   <script type="text/javascript"> 
+var map = new BMap.Map("container"); 
+var point = new BMap.Point(107.912769,34.439989); 
+ 
+var marker = new BMap.Marker(point); // 创建标注
+map.centerAndZoom(point, 25); 
+map.addControl(new BMap.NavigationControl()); 
+map.addControl(new BMap.ScaleControl()); 
+map.addControl(new BMap.OverviewMapControl()); 
+//map.addControl(new BMap.MapTypeControl()); 
+map.enableScrollWheelZoom(); 
+map.addOverlay(marker); 
+</script> 
+ <script type="text/javascript">
+    $(function () {
+        $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $animating = false;
+        $('.fixedBtn .top').click(function () {
+            if ($animating == false) {
+                $body.animate({ scrollTop: 0 }, 500);
+                $animating = true;
+            }
+            return false;
+        });
+        $(window).scroll(function () {
+            if ($('.fixedBtn').offset().top > 500) {
+                $('.fixedBtn .top').css('display', 'inline-block');
+            } else {
+                $('.fixedBtn .top').css('display', 'none');
+                $animating = false;
+            }
+        });
+        var fixedBtn = $('.fixedBtn'),
+		feedback = $('.feedback', fixedBtn),
+		feedbackCnt = $('.feedbackCnt'),
+		feedbackTips = $('.feedbackTips', fixedBtn),
+		FBCLASS = 'fb-open',
+		close = function () {
+		    fixedBtn.animate({
+		        right: '-=80'
+		    })
+		    feedbackCnt.removeClass(FBCLASS);
+		},
+		open = function () {
+		    feedbackTips.hide();
+		    feedbackCnt.show();
+		    fixedBtn.animate({
+		        right: '+=80'
+		    });
+		    feedbackCnt.addClass(FBCLASS);
+		};
+        feedback.length && feedback.on('click', function (e) {
+            e.preventDefault();
+            feedbackCnt.hasClass(FBCLASS) ? close() : open();
+        });
+    });
+</script>   
+    </form>
+</body>
+</html>
+
+		

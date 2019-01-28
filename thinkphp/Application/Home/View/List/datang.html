@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="keywords"  />
+<title>
+	绿友门户网站
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;IE9" />
+<link href="__PUBLIC__/css/List/index.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/List/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.tmailsilder.v2.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
+<script language="JavaScript">
+    function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6. 
+    {
+        var arVersion = navigator.appVersion.split("MSIE")
+        var version = parseFloat(arVersion[1])
+        if ((version >= 5.5) && (document.body.filters)) {
+            for (var j = 0; j < document.images.length; j++) {
+                var img = document.images[j]
+                var imgName = img.src.toUpperCase()
+                if (imgName.substring(imgName.length - 3, imgName.length) == "PNG") {
+                    var imgID = (img.id) ? "id='" + img.id + "' " : ""
+                    var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+                    var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+                    var imgStyle = "display:inline-block;" + img.style.cssText
+                    if (img.align == "left") imgStyle = "float:left;" + imgStyle
+                    if (img.align == "right") imgStyle = "float:right;" + imgStyle
+                    if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+                    var strNewHTML = "<span " + imgID + imgClass + imgTitle
+             + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+             + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+             + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+                    img.outerHTML = strNewHTML
+                    j = j - 1
+                }
+            }
+        }
+    }
+    window.attachEvent("onload", correctPNG); 
+</script>
+<script language="javascript">
+    function tabChange(obj, id) {
+        var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
+        var arrayul = document.getElementById(id).getElementsByTagName("ul"); //获取ul数组
+        for (i = 0; i < arrayul.length; i++) {
+            if (obj == arrayli[i]) {
+                arrayli[i].className = "cli";
+                arrayul[i].className = "";
+            }
+            else {
+                arrayli[i].className = "";
+                arrayul[i].className = "hidden";
+            }
+        }
+    }
+</script>
+
+<script src="__PUBLIC__/js/List/jquery.easing.1.3.js" type="text/javascript"></script>
+<link href="__PUBLIC__/css/List/sexylightbox.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/js/List/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        SexyLightbox.initialize({ color: 'white', dir: 'images' });
+    });
+</script>
+<script type='text/javascript' src='__PUBLIC__/js/List/jquery.dcmegamenu.1.3.2.js'></script>
+
+<link rel="stylesheet" href="__PUBLIC__/css/List/globle_cn.css" type="text/css" /><link rel="stylesheet" href="css/globle_cn_ie6.css" type="text/css" />
+
+
+  <script>
+      $(document).ready(function () {
+
+          $('.nav li').hover(
+		function () {
+		    //show its submenu
+		    $(".menuitempanel", this).slideDown(100);
+		    $("#menuhover", this).addClass("head_hover_bg");
+		    $("#menuhover span", this).addClass("head_hover_bg");
+		},
+		function () {
+		    //hide its submenu
+		    $(".menuitempanel", this).slideUp(100);
+		    $("#menuhover", this).removeClass("head_hover_bg");
+		    $("#menuhover span", this).removeClass("head_hover_bg");
+		}
+	);
+      });
+</script>
+
+
+</head>
+<body>
+ <!--网页导航-->
+        <div class="head-nav">  
+    <div style="padding-top:5px">
+<include file="Public/navi" />
+
+
+    </div>
+      </div>
+        <!--网页导航 结束-->  
+    <form method="post" action="jqjd_xx.aspx?moduleid=92&amp;id=142" id="form1">
+
+<div id="contenter">
+	<div id="main2-2">
+	<div style="margin-top:0px;color:white;font-size:5px">111</div>
+	<div style="border:1px solid rgb(173, 207, 242);padding-left:10px;width:960px;margin:0px auto 10px">
+		<include file="Public/navi3" />	
+		</div>
+		<div style="margin-left:30px;">
+		<include file="Public/navi2" />
+		</div>
+<div class="con18right"> 
+<h3>大唐芙蓉园</h3> 
+<ul> 
+<li><span>地址：</span>西安市曲江新区</li> 
+<li><span>门票：</span>180元</li> 
+<li><span>电话：</span>028-83770770</li> 
+</ul> 
+</div> 
+<div class="clear"></div> 
+<div class="con19"> 
+<div class="tabbox"> 
+<div class="tabmenu"> 
+<ul> 
+<li onclick="tabChange(this,'tabcontent')" class="cli" style="cursor:hand">简介</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">景点</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">推荐</li> 
+</ul> 
+</div> 
+<div id="tabcontent"> 
+<ul name="tabul"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>西安大唐芙蓉园是国家AAAAA级旅游景区，全国首个全方位展示盛唐风貌的大型皇家园林式文化主题公园，是首个“五感”（即视觉、听觉、嗅觉、触觉、味觉）主题公园，拥有全球最大户外香化工程以及全球最大的水景表演展示。</p>
+<p>大唐芙蓉园位于陕西省西安市曲江新区，建于原唐代芙蓉园遗址所在地，占地1000余亩，总投资13亿元。景区包括紫云楼、仕女馆、御宴宫、芳林苑、凤鸣九天剧院、杏园、陆羽茶社、唐市、曲江流饮等众多景点。[.5公里处，是秦始皇帝陵的一部分陪葬坑，在已发现的三座俑坑里出土了大量的兵马俑。</p>
+<p>全园景观分为十二个文化主题区域，从帝王、诗歌、民间、饮食、女性、茶文化、宗教、科技、外交、科举、歌舞、大门特色等方面全方位再现了大唐盛世的灿烂文明。园中亭台楼阁、雕梁画栋，包括有紫云楼、仕女馆、御宴宫、芳林苑、凤鸣九天剧院、杏园、陆羽茶社、唐市等众多景点。 园区各景点每天上演各种精彩节目，包括祈天鼓舞、“教坊乐舞”宫廷演出、“艳影霓裳”服饰表演、少林武术表演、舞狮、高跷、杂技等。每晚上演的全球最大水幕电影，集音乐喷泉、激光、火焰、水雷、水雾为一体，带给游客震撼的立体感觉。园区主题演出大型梦幻诗乐舞剧《梦回大唐》恢宏大气，如梦亦幻，曾应邀赴新加坡演出，受到了新加坡总统纳丹、总理李显龙和内阁资政李光耀的亲切接见和大力称赞。每逢节假日，还有各种应景主题活动，带给你三百六十五天的惊喜欢乐。它将带您进入中国唯一的盛唐文化之旅。</p>
+</div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>一.帝王文化区</p> 
+<p>帝王文化区以全园标志性建筑——紫云楼为代表，展示了“形神升腾紫云景，天下臣服帝王心”的唐代帝王风范。历史上的紫云楼，据载建于唐开元十四年，每逢曲江大会，唐明皇必登临此楼，欣赏歌舞、赐宴群臣与民同乐。依史料重建的紫云楼位于现园区中心位置，也是全园最主要的仿唐建筑群之一，主楼共计四层，每层都以不同的角度，不同的载体共同展示了盛唐帝王文化。
+</p>
+<p>二.水秀表演区</p>
+<p>位于紫云楼观澜台前的湖面，是大唐芙蓉园集水幕电影、音乐喷泉、激光火焰水雷水雾为一体的，世界级大型现代化水体景观。全球最大的——水幕电影，宽120米高20米的水幕，以激光辅助，突出水幕上水的流动质感，利用激光表演组成了音乐、喷泉、激光三者相结合的水上效果，火焰、水雷、水雾各种变化无穷的感官刺激性效果设计，使游人们从视觉、听觉、触觉上感受到这一集声光电水火为一体的绝无仅有的、超震撼的水秀表演。.7万平方米的陈列大厅，是我国规模最大、功能最齐全的现代化遗址陈列厅。二号坑有陶俑陶马1300多件，战车80余辆，青铜兵器数万件，其中将军俑、鞍马俑、跪姿射俑为首次发现。二号坑东、西两端各有4个斜坡门道，北边有2个斜坡门道，俑坑坐西面东，正门在东边。</p>
+<p>三.歌舞文化区</p>
+<p>位于紫云楼南的——凤鸣九天剧院，是歌舞文化区内一个蕴涵盛唐风韵的现代化皇家剧院。剧院金碧辉煌、体现皇家风范。剧院的保留主打节目，是以中国最佳编导阵容编排的歌舞剧——梦回大唐。以现代艺术手法，配以全新视听效果，表现了壮丽恢弘，大气磅礴的盛唐风貌。整个演出如诗如梦，流光异彩的灯光，绚烂的服饰，天籁般的音乐，妩媚的舞女，将您的身心都牵引到那盛世大唐</p>
+<p>四.饮食文化区</p>
+<p>“唐风食府悦客来，道逢佳肴口流涎。依水品花饮美酒，逍遥自在随意间。”御宴宫——位于园区西门北侧，是展示唐代饮食文化的中心，集美食、美器、美酒、美乐为一体的大型主题餐饮区。独特的仿唐宫廷御宴，豪华的就餐环境，给您帝王般的就餐享受。</p>
+<p>五.民俗文化区</p>
+<p>“市井平常事，最是热闹处”。民俗文化区内——唐市位于园区的南面，由唐集市和戏楼广场组成，面积一万两千零二十二平方米。唐市二期项目，是以古长安城进行贸易、商业活动市集为缩影，以反映唐代“商贾云集、内外通融”的商业文化氛围为核心，集观赏、游乐、消遣、体验、交流、消费为一体的唐朝风俗文化街。</p>
+<p>六.女性文化区</p>
+<p>女性文化区，以位于芙蓉池北岸的仕女馆及彩霞亭为代表，展示了唐代女性“巾帼风采，敢与男子争天下；柔情三千，横贯古今流芳名”的精神风貌。</p>
+<p>七.品茶文化区</p>
+<p>“三篇陆羽经，七度卢仝茶，临窗会友细味禅茶，笑看曲江波，淡然超脱间。”位于园区茶文化区内的以唐代“茶圣”陆羽命名的——“陆羽茶社”，彰显唐代茶文化主题，是一个由帝王茶艺、文人茶艺、世俗茶艺、茶艺表演组成的综合性高档茶艺会所。在这里您不仅可以品尝到上等的香茗，更可以欣赏到一流的茶艺表演：大红袍、双飞、东方美人，沁人心脾，余味饶舌不绝</p>
+<p>八.诗歌文化区</p>
+<p>唐诗是我国古典诗歌的瑰宝，也是世界文化遗产的明珠。以诗魂及唐诗峡为代表组成的诗歌文化区，不仅用雕塑的形式展示了唐代诗歌文化，让您在观赏雕塑艺术的同时，领略唐代诗人的旷世风采，唐诗的内在精髓；同时，也是运用中国园林造景、中国雕塑、中国书法、中国印章刻字、图形纹样等多种传统艺术手法塑造出的大型景观艺术雕塑区。</p>
+<p></p>
+<div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>门票</p>
+<p>景区门票：旺季120元/人：淡季90元/人（景区门票、水幕电影、及各类表演，不含《梦回大唐》节目表演）
+
+景区套票：140元/人（景区门票、水幕电影、梦回大唐歌舞等各类表演）
+
+特殊人群预定标准（特殊人群无需在线预定，可直接去景区自行购票）：
+
+A.免费政策：1.2米以下儿童免票；65岁以上老人凭老人证免费；军人持军官证、残疾人持残疾证免票。
+
+B.优惠政策：身高1.2-1.4米购儿童票45元/人</p>
+<p>交通</p>
+<p>乘坐公交21、22、24、41、212、224、237、320(游9)、601、609、610、715、720路可到。（可从火车站乘K5到大雁塔再乘坐以上车辆） </p>
+</div> 
+</ul> 
+</div> 
+</div> 
+</div> 
+<div class="con21"> 
+<h3><span>电子地图</span></h3> 
+<h4> 
+<div style="width: 99%; height: 235px; border: 1px solid gray" id="container"></div> 
+
+</h4> 
+</div> 
+<div class="con20"> 
+<h3><span>图集</span></h3> 
+<h4> 
+<a><img src="__PUBLIC__/img/bingma/bingma1.jpg" /></a>
+<a><img src="__PUBLIC__/img/bingma/bingma2.jpg" /></a>
+<a><img src="__PUBLIC__/img/bingma/bingma3.jpg" /></a>
+<a><img src="__PUBLIC__/img/bingma/bingma5.jpg" /></a>
+</h4> 
+
+</div> 
+
+			</div>
+			
+		</div>
+		
+		
+		
+		
+	<include file="List/comment" />	
+	</div>
+
+
+
+
+	
+		
+	
+   <script type="text/javascript"> 
+var map = new BMap.Map("container"); 
+var point = new BMap.Point(108.980329,34.218454); 
+ 
+var marker = new BMap.Marker(point); // 创建标注
+map.centerAndZoom(point, 25); 
+map.addControl(new BMap.NavigationControl()); 
+map.addControl(new BMap.ScaleControl()); 
+map.addControl(new BMap.OverviewMapControl()); 
+//map.addControl(new BMap.MapTypeControl()); 
+map.enableScrollWheelZoom(); 
+map.addOverlay(marker); 
+</script> 
+ <script type="text/javascript">
+    $(function () {
+        $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $animating = false;
+        $('.fixedBtn .top').click(function () {
+            if ($animating == false) {
+                $body.animate({ scrollTop: 0 }, 500);
+                $animating = true;
+            }
+            return false;
+        });
+        $(window).scroll(function () {
+            if ($('.fixedBtn').offset().top > 500) {
+                $('.fixedBtn .top').css('display', 'inline-block');
+            } else {
+                $('.fixedBtn .top').css('display', 'none');
+                $animating = false;
+            }
+        });
+        var fixedBtn = $('.fixedBtn'),
+		feedback = $('.feedback', fixedBtn),
+		feedbackCnt = $('.feedbackCnt'),
+		feedbackTips = $('.feedbackTips', fixedBtn),
+		FBCLASS = 'fb-open',
+		close = function () {
+		    fixedBtn.animate({
+		        right: '-=80'
+		    })
+		    feedbackCnt.removeClass(FBCLASS);
+		},
+		open = function () {
+		    feedbackTips.hide();
+		    feedbackCnt.show();
+		    fixedBtn.animate({
+		        right: '+=80'
+		    });
+		    feedbackCnt.addClass(FBCLASS);
+		};
+        feedback.length && feedback.on('click', function (e) {
+            e.preventDefault();
+            feedbackCnt.hasClass(FBCLASS) ? close() : open();
+        });
+    });
+</script>   
+    </form>
+</body>
+</html>
+
+		

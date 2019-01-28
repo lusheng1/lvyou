@@ -1,0 +1,132 @@
+本文将使用PHP+Mysql+jQuery来实现一个密码找回的功能，一般步骤是：
+
+1.表单输入注册时的邮箱；
+
+2.验证用户邮箱是否正确，如果用户邮箱不存在网站的用户表中，则提示用户邮箱未注册；
+
+3.发送邮件，如果用户邮箱确实存在用户表中，则组合用于验证用户信息的字符串，并构造URL发送到用户邮箱中;
+
+4.用户登录邮箱收取邮件，点击URL链接到网站验证程序；
+
+5.网站程序通过用户请求的字符串查询本地用户表，比对用户信息是否正确；
+
+6.如果正确则转到重置密码页面重新设置新密码，反之则提示用户验证无效。
+<p><strong>输入您注册的电子邮箱，找回密码：</strong></p> 
+<p><input type="text" class="input" name="email" id="email"><span id="chkmsg"></span></p> 
+<p><input type="button" class="btn" id="sub_btn" value="提 交"></p> 
+jQuery
+$(function(){ 
+    $("#sub_btn").click(function(){ 
+        var email = $("#email").val(); 
+        var preg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/; //匹配Email 
+        if(email=='' || !preg.test(email)){ 
+            $("#chkmsg").html("请填写正确的邮箱！"); 
+        }else{ 
+            $("#sub_btn").attr("disabled","disabled").val('提交中..').css("cursor","default"); 
+            $.post("sendmail.php",{mail:email},function(msg){ 
+                if(msg=="noreg"){ 
+                    $("#chkmsg").html("该邮箱尚未注册！"); 
+                    $("#sub_btn").removeAttr("disabled").val('提 交').css("cursor","pointer"); 
+                }else{ 
+                    $(".demo").html("<h3>"+msg+"</h3>"); 
+                } 
+            }); 
+        } 
+    }); 
+}) 
+PHP
+
+sendmail.php需要验证Email是否存在系统用户表中，如果有，则读取用户信息，将用户id、用户名和密码
+惊醒md5加密生成一个特别的字符串作为找回密码的验证码，然后构造URL。同时我们为了控制URL链接的时效性，
+将记录用户提交找回密码动作的操作时间，最后调用邮件发送类发送邮件到用户邮箱，发送邮件类smtp.class.php已经打包好，
+请下载
+include_once("connect.php");//连接数据库 
+ 
+$email = stripslashes(trim($_POST['mail'])); 
+     
+$sql = "select id,username,password from `t_user` where `email`='$email'"; 
+$query = mysql_query($sql); 
+$num = mysql_num_rows($query); 
+if($num==0){//该邮箱尚未注册！ 
+    echo 'noreg'; 
+    exit;     
+}else{ 
+    $row = mysql_fetch_array($query); 
+    $getpasstime = time(); 
+    $uid = $row['id']; 
+    $token = md5($uid.$row['username'].$row['password']);//组合验证码 
+    $url = "http://www.helloweba.com/demo/resetpass/reset.php?email=".$email." 
+&token=".$token;//构造URL 
+    $time = date('Y-m-d H:i'); 
+    $result = sendmail($time,$email,$url); 
+    if($result==1){//邮件发送成功 
+        $msg = '系统已向您的邮箱发送了一封邮件<br/>请登录到您的邮箱及时重置您的密码！'; 
+        //更新数据发送时间 
+        mysql_query("update `t_user` set `getpasstime`='$getpasstime' where id='$uid '"); 
+    }else{ 
+        $msg = $result; 
+    } 
+    echo $msg; 
+} 
+ 
+//发送邮件 
+function sendmail($time,$email,$url){ 
+    include_once("smtp.class.php"); 
+    $smtpserver = ""; //SMTP服务器，如smtp.163.com 
+    $smtpserverport = 25; //SMTP服务器端口 
+    $smtpusermail = ""; //SMTP服务器的用户邮箱 
+    $smtpuser = ""; //SMTP服务器的用户帐号 
+    $smtppass = ""; //SMTP服务器的用户密码 
+    $smtp = new Smtp($smtpserver, $smtpserverport, true, $smtpuser, $smtppass);  
+    //这里面的一个true是表示使用身份验证,否则不使用身份验证. 
+    $emailtype = "HTML"; //信件类型，文本:text；网页：HTML 
+    $smtpemailto = $email; 
+    $smtpemailfrom = $smtpusermail; 
+    $emailsubject = "Helloweba.com - 找回密码"; 
+    $emailbody = "亲爱的".$email."：<br/>您在".$time."提交了找回密码请求。请点击下面的链接重置密码 
+（按钮24小时内有效）。<br/><a href='".$url."'target='_blank'>".$url."</a>"; 
+    $rs = $smtp->sendmail($smtpemailto, $smtpemailfrom, $emailsubject, $emailbody, $emailtype); 
+ 
+    return $rs; 
+}
+好了，这个时候你的邮箱将会收到一封来自helloweba的密码找回邮件，邮件内容中有一个URL链接，点击该链接到helloweba.com的reset.php来验证邮箱。
+
+include_once("connect.php");//连接数据库 
+ 
+$token = stripslashes(trim($_GET['token'])); 
+$email = stripslashes(trim($_GET['email'])); 
+$sql = "select * from `t_user` where email='$email'"; 
+ 
+$query = mysql_query($sql); 
+$row = mysql_fetch_array($query); 
+if($row){ 
+    $mt = md5($row['id'].$row['username'].$row['password']); 
+    if($mt==$token){ 
+        if(time()-$row['getpasstime']>24*60*60){ 
+            $msg = '该链接已过期！'; 
+        }else{ 
+            //重置密码... 
+            $msg = '请重新设置密码，显示重置密码表单，<br/>这里只是演示，略过。'; 
+        } 
+    }else{ 
+        $msg =  '无效的链接'; 
+    } 
+}else{ 
+    $msg =  '错误的链接！';     
+} 
+echo $msg; 
+
+reset.php首先接受参数email和token，然后根据email查询数据表t_user中是否存在该Email，如果存在则获取该用户的信息，并且和sendmail.php中的token组合方式一样构建token值，然后与url传过来的token进行对比，如果当前时间与发送邮件时的时间相差超过24小时的，则提示“该链接已过期！”，反之，则说明链接有效，并且调转到重置密码页面，最后就是用户自己设置新密码了。
+
+小结：通过注册邮箱验证与本文邮件找回密码，我们知道发送邮件在网站开发中的应用以及它的重要性，当然，现在也流行短信验证应用，这个需要相关的短信接口对接就可以了。
+
+最后，附上数据表t_user结构：
+
+CREATE TABLE `t_user` ( 
+  `id` int(11) NOT NULL auto_increment, 
+  `username` varchar(30) NOT NULL, 
+  `password` varchar(32) NOT NULL, 
+  `email` varchar(50) NOT NULL, 
+  `getpasstime` int(10) NOT NULL, 
+  PRIMARY KEY  (`id`) 
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8; 

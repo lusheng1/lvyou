@@ -1,0 +1,92 @@
+/*¶¥²¿µ¼º½À¸*/
+.top-nav {
+width: 100%;
+height: 115px;
+border-bottom: 4px solid #3881FF;
+box-shadow: 0 5px 5px rgba(204, 204, 204, .5);
+}
+.logo {
+float: left;
+height: 115px;
+line-height: 115px;
+margin-left: 14px;
+width: 220px;
+}
+.logo img {
+}
+.nav-warp {
+float: left;
+width: auto;
+height: 110px;
+line-height: 115px;
+margin-left: 20px;
+}
+.nav-warp a {
+padding: 0px 15px;
+}
+.nav-warp a:hover {
+border-bottom: 2px solid #3881FF;
+}
+.head-nav{
+    height: 85px;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    border-bottom: 0px solid #3882FF;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.head-warp{
+    width: 1200px;
+    margin: 0 auto;
+    height: 85px;
+    position: relative;
+}
+
+.nav-body{
+    height: 85px;
+    width: 1000px;
+    margin-left: 170px;
+    line-height: 85px;
+	margin-top:-20px;
+}
+.nav-body a{
+    display: inline-block;
+    height: 85px;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size:17px;
+    transition: background .5s ease 0;
+}
+.head-nav{
+    height: 85px;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    border-bottom: 2px solid #3882FF;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.head-warp{
+    width: 1200px;
+    margin: 0 auto;
+    height: 85px;
+    position: relative;
+}
+
+.head-code{
+    width: 170px;
+    height: 420px;
+    background: url("../img/v4home.png") no-repeat -10px -751px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-indent: -900px;
+    overflow: hidden;
+}
+
+.nav-body a:hover,.nav-body a.on{
+    background: #3882FF;
+}

@@ -1,0 +1,468 @@
+/*今日热点*/
+.day-hot{
+    position: relative;
+    height: 312px  ;
+}
+.day-hot .bubble{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 10px;
+    background-color: #3881FF;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    left: -15px;
+}
+.slider-bar{
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    width: 98%;
+    margin: 1px auto;
+}
+
+.slider-bar .dot,.slider-bar .arrow{
+    font-size: 0;
+    line-height: 0;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #DCDCDC;
+    cursor: pointer;
+}
+.slider-bar .dot.active{
+    background: #3881FF;
+}
+.slider-bar .arrow{
+    padding: 16px;
+    background: none;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slider-bar .prev{
+    background-image: url("../img/pg_l.png");
+}
+.slider-bar .next{
+    background-image: url("../img/pg_r.png");
+}
+
+.day-hot .warp{
+    width: 970px;
+    height: 235px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.day-hot .warp li{
+    float: left;
+    list-style: none;
+}
+.day-hot .warp li .hot-thumb{
+    float: right;
+}
+.day-hot .warp li .hot-thumb img{
+    width: 415px;
+    height: 235px;
+}
+.day-hot .warp li .hot-body{
+    float: left;
+    width: 520px;
+    height: 100%;
+    margin-left: 15px;
+}
+
+.hot-body .title{
+    height: 40px;
+    line-height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.hot-body .title a{
+    font-size: 25px;
+}
+.intro{
+    color: #959595;
+
+}
+.hot-body .intro{
+    text-indent: 2em;
+    margin: 15px auto;
+}
+.hot-body .share-bar{
+    height: 40px;
+    line-height: 40px;
+
+}
+.hot-body .share-bar .v-detail{
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    color: #ffffff;
+    background: #959595;
+    text-align: center;
+    float: left;
+}
+.hot-body .share-bar .v-detail:hover{
+    background: #3881FF;
+}
+
+/*高端访谈*/
+.interview{
+    height: 120px;
+    background-position:center left;
+    background-repeat:   no-repeat ;
+    background-image: url("../img/interview.png");
+}
+.interview .warp{
+    height: 95px;
+    width: 880px;
+    margin: 12px;
+    float: right;
+    margin-right: 15px;
+}
+.iv-item{
+    width: 439px;
+    float: left;
+    overflow: hidden;
+}
+.iv-item .iv-thumb{
+    float: left;
+    width: 125px;
+    height: 95px;
+}
+.iv-item .iv-thumb img{
+    width: 125px;
+    height: 95px;
+}
+.iv-item .iv-body{
+    float: left;
+    width: 295px;
+    margin-left: 10px;
+}
+.iv-item .title{
+    height: 30px;
+    line-height: 30px;
+}
+.iv-item .title a{
+    font-size: 20px;
+}
+.iv-item .intro{
+    font-size: 14px;
+}
+
+.in-any{
+    height: 370px;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.in-item{
+    float: left;
+    height: 370px;
+    
+}
+.in-cd{
+    background: url("../img/in_chengdu.png") no-repeat center;
+    width: 59px;
+}
+
+.in-slider{
+    width: 57px;
+    overflow: hidden;
+}
+.in-slider .dot{
+    width: 57px;
+    height: 57px;
+    background: url("../img/bg_arec_ccc.png") no-repeat center;
+    margin-bottom: 5px;
+    line-height: 57px;
+    text-align: center;
+    font-size: 27px;
+    font-family: Tahoma, Verdana, Arial, Helvetica;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.in-slider .dot:hover,.in-slider .active{
+    background-image: url("../img/bg_arec_blue.png");
+}
+.in-sc{
+    background: url("../img/in_sichuan.png") no-repeat center;
+    width: 76px;
+}
+.in-body{
+    width: 395px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 3px #ccc;
+    background: #ffffff;
+}
+.in-body li{
+    overflow: hidden;
+}
+
+
+
+.doc-item{
+    width: 350px;
+    height: 145px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.doc-item .doc-title{
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #343434;
+    margin-bottom: 14px;
+}
+.doc-item .doc-tp{
+    float: left;
+    width: 50px;
+    height: 30px;
+    background: #FE7801;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.doc-item .doc-intro{
+    font-size: 14px;
+    color: #999999;
+}
+.doc-intro img{
+    width: 150px;
+    height: 110px;
+}
+.doc-intro-text{
+    width: 190px;
+    height: 110px;
+    overflow: hidden;
+    float: right;
+}
+
+
+
+/*中部 感受文化*/
+.bf{
+    float: left;
+    height: 430px;
+}
+/*发现新美景*/
+.beauty{
+    width: 293px;
+    height: 430px;
+    position: relative;
+}
+.beauty>a>img{
+    width: 293px;
+    height: 240px;
+}
+.beauty .label{
+    position: absolute;
+    height: 45px;
+    width: 105px;
+    background: url("../img/beauty.png") no-repeat center;
+    z-index: 3;
+    line-height: 30px;
+    color: #ffffff;
+    left: -12px;
+    top: 15px;
+    text-indent: 12px;
+}
+.beauty-warp{
+    width: 273px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.beauty-intro{
+    height: 88px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #999999;
+    line-height: 21px;
+}
+.title{
+    color: #1B1B1B;
+    font-size: 18px;
+    line-height: 35px;
+}
+.beauty .location{
+    background: url("../img/location.png") no-repeat center left ;
+    color: #999999;
+    text-indent: 25px;
+    float: left;
+}
+.beauty-location{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+/*人文 诗文成都*/
+.poems-cultural{
+    width: 347px;
+    margin: 0 18px;
+}
+.cultural,.cultural-warp{
+    position: relative;
+    width: 345px;
+    height: 225px;
+    overflow: hidden;
+}
+.cultural img{
+    width: 345px;
+    height: 225px;
+}
+.cultural-warp{
+    overflow: initial;
+}
+.cultural .mask{
+    position: relative;
+    display: block;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    line-height: 40px;
+    text-indent: 1em;
+    top: -40px;
+    z-index: 5;
+}
+.cultural .mask a{
+    color: white;
+}
+.cultural li{
+    float: left;
+    list-style: none;
+}
+.cultural .idx{
+    float: right;
+    color: white;
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 2px;
+    margin-right: 10px;
+    font-family: "宋体";
+    word-spacing: 0px;
+    letter-spacing: -4px;
+}
+.cultural-warp .label{
+    background: url("../img/cultural.png") no-repeat center  ;
+    width: 56px;
+    height: 64px;
+    position: absolute;
+    top: -5px;
+    right: 20px;
+}
+
+
+.poems{
+    height: 178px;
+    width: 345px;
+    margin-top: 25px;
+    background: #FFFFFF;
+}
+.poems .head{
+    height: 45px;
+    line-height: 45px;
+    font-family: Tahoma, Verdana, Arial, Helvetica;
+    background: url("../img/poems.png") no-repeat 15px center;
+}
+.poems .head .arrow{
+    float: right;
+    padding: 11px;
+    margin: 0;
+    font-size: 0;
+    line-height: 0px;
+    margin-right: 5px;
+    margin-top: 11px;
+}
+.poems .head .prev{
+    background: url("../img/poems_l.png") no-repeat center;
+
+}
+.poems .head .next{
+    background: url("../img/poems_r.png") no-repeat center;
+    margin-right: 15px;
+}
+.poems .body{
+    height: 140px;
+    width: 305px;
+    overflow: hidden;
+    margin: 0 auto;
+
+}
+.poems .body .title{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.poems .body .intro{
+    font-size: 14px;
+    line-height: 25px;
+}
+.poems .body .intro a{
+    float: right;
+}
+.poems .body li{
+    float: left;
+    list-style: none;
+}
+/*视频 自驾*/
+.line-video{
+    width: 295px;
+}
+.video{
+    height: 225px;
+    width: 300px;
+    background: #ffffff;
+}
+.video img{
+    width: 300px;
+    height: 185px;
+}
+.video .title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+.line{
+    width: 300px;
+    height: 178px;
+    margin-top: 25px;
+}
+.line .item-warp{
+    margin: 16px auto;
+    width: 240px;
+    height: 146px;
+}
+.line .title{
+    height: 30px;
+    line-height: 30px;
+}
+.line .title .label{
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    background: #3881FF;
+    color: white;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.line .intro{
+    font-size: 14px;
+    line-height: 21px;
+}
+.line .item{
+    height: 73px;
+    width: 240px;
+}
+
+

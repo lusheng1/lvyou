@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="keywords"  />
+<title>
+	绿友门户网站
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;IE9" />
+<link href="__PUBLIC__/css/List/index.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/List/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.tmailsilder.v2.css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
+<script language="JavaScript">
+    function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6. 
+    {
+        var arVersion = navigator.appVersion.split("MSIE")
+        var version = parseFloat(arVersion[1])
+        if ((version >= 5.5) && (document.body.filters)) {
+            for (var j = 0; j < document.images.length; j++) {
+                var img = document.images[j]
+                var imgName = img.src.toUpperCase()
+                if (imgName.substring(imgName.length - 3, imgName.length) == "PNG") {
+                    var imgID = (img.id) ? "id='" + img.id + "' " : ""
+                    var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+                    var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+                    var imgStyle = "display:inline-block;" + img.style.cssText
+                    if (img.align == "left") imgStyle = "float:left;" + imgStyle
+                    if (img.align == "right") imgStyle = "float:right;" + imgStyle
+                    if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+                    var strNewHTML = "<span " + imgID + imgClass + imgTitle
+             + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+             + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+             + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+                    img.outerHTML = strNewHTML
+                    j = j - 1
+                }
+            }
+        }
+    }
+    window.attachEvent("onload", correctPNG); 
+</script>
+<script language="javascript">
+    function tabChange(obj, id) {
+        var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
+        var arrayul = document.getElementById(id).getElementsByTagName("ul"); //获取ul数组
+        for (i = 0; i < arrayul.length; i++) {
+            if (obj == arrayli[i]) {
+                arrayli[i].className = "cli";
+                arrayul[i].className = "";
+            }
+            else {
+                arrayli[i].className = "";
+                arrayul[i].className = "hidden";
+            }
+        }
+    }
+</script>
+
+<script src="__PUBLIC__/js/List/jquery.easing.1.3.js" type="text/javascript"></script>
+<link href="__PUBLIC__/css/List/sexylightbox.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/js/List/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        SexyLightbox.initialize({ color: 'white', dir: 'images' });
+    });
+</script>
+<script type='text/javascript' src='__PUBLIC__/js/List/jquery.dcmegamenu.1.3.2.js'></script>
+
+<link rel="stylesheet" href="__PUBLIC__/css/List/globle_cn.css" type="text/css" /><link rel="stylesheet" href="css/globle_cn_ie6.css" type="text/css" />
+
+
+  <script>
+      $(document).ready(function () {
+
+          $('.nav li').hover(
+		function () {
+		    //show its submenu
+		    $(".menuitempanel", this).slideDown(100);
+		    $("#menuhover", this).addClass("head_hover_bg");
+		    $("#menuhover span", this).addClass("head_hover_bg");
+		},
+		function () {
+		    //hide its submenu
+		    $(".menuitempanel", this).slideUp(100);
+		    $("#menuhover", this).removeClass("head_hover_bg");
+		    $("#menuhover span", this).removeClass("head_hover_bg");
+		}
+	);
+      });
+</script>
+
+
+</head>
+<body>
+ <!--网页导航-->
+        <div class="head-nav">  
+    <div style="padding-top:5px">
+<include file="Public/navi" />
+
+
+    </div>
+      </div>
+        <!--网页导航 结束-->  
+    <form method="post" action="jqjd_xx.aspx?moduleid=92&amp;id=142" id="form1">
+
+<div id="contenter">
+	<div id="main2-2">
+	<div style="margin-top:0px;color:white;font-size:5px">111</div>
+	<div style="border:1px solid rgb(173, 207, 242);padding-left:10px;width:960px;margin:0px auto 10px">
+		<include file="Public/navi3" />	
+		</div>
+		<div style="margin-left:30px;">
+		<include file="Public/navi2" />
+		</div>
+<div class="con18right"> 
+<h3>西安碑林</h3> 
+<ul> 
+<li><span>地址：</span>西安三学街</li> 
+<li><span>门票：</span>180元</li> 
+<li><span>电话：</span>028-83770770</li> 
+</ul> 
+</div> 
+<div class="clear"></div> 
+<div class="con19"> 
+<div class="tabbox"> 
+<div class="tabmenu"> 
+<ul> 
+<li onclick="tabChange(this,'tabcontent')" class="cli" style="cursor:hand">简介</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">景点</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">推荐</li> 
+</ul> 
+</div> 
+<div id="tabcontent"> 
+<ul name="tabul"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>陕西省西安市南城墙魁星楼下的碑林，因碑石丛立如林而得名。这是收藏中国古代碑石时间最早名碑最多的汉族文化艺术宝库。它始建于北宋哲宗元祐二年（1087年），原为保存唐开元年间镌刻的《十三经》、《石台孝经》而建，后经历代收集，规模逐渐扩大，清始称“碑林”。几经易名，1992年正式定名为西安碑林博物馆。该馆是在西安孔庙旧址上扩建而成的一座以收藏、研究和陈列历代碑石、墓志及石刻造像为主的艺术博物馆。馆区占地面积31900平方米，由孔庙、碑林、石刻艺术室、书法四部分组成，设七个陈列室、六条游廊和一个碑亭，陈列面积4900平方米。</p>
+<p>陕西西安碑林始建于宋哲宗元祐二年（1087），经金、元、明、清、民国历代的维修及增建，规模不断扩大，藏石日益增多，现收藏自汉代至今的碑石、墓志4000余件，数量为全国之最，藏品时代系列完整，时间跨度达2000多年。西安碑林坐落于著名古城西安市三学街（因清代的长安学、府学、咸宁学均设在这里而得此名）。它于北宋哲宗元祐二年（公元1078年）为保存《石台孝经》、《开成石经》、《十三经》而建立。九百多年来，经历代征集，扩大收藏，精心保护，入藏碑石近三千方。现有六个碑廊、七座碑室、八个碑亭，陈列展出了共一千零八十七方碑石。在名碑荟萃的展室里，展示了圣儒、哲人的浩瀚石经；秦汉文人的古朴遗风；魏晋北朝墓志的英华；大唐名家的绝代书法以及宋元名士的潇洒笔墨。书圣王羲之、画圣吴道子书画同辉的笔墨迹以及诗画双绝的王维的竹影清风更为碑林增辉溢彩。西安碑林以其独有的特色成为汉民族历史文物宝库中的一个重要组成部分，1962年被公布为中国第一批重点文物保护单位。</p>
+<p>西安钟楼是中国古代遗留下来众多钟楼中形制最大、保存最完整的一座。西安是明代西北军政重镇，所以无论从建筑规模、历史价值或艺术价值各方面来说，它都居全国同类建筑之首。</p>
+</div>  
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>一.第一陈列室</p> 
+<p>西安钟楼下部为砖石结构的正方形基座，表面用青砖砌成，基座之上为两层木结构楼体。自地面至楼顶高36米，其中基座高8.6米。每边长35.5米，建筑面积约1,377.4平方米，内有楼梯可盘旋而上。整体呈典型明代建筑艺术风格，顶部为三重四面攒尖顶结构，由斗栱支撑，顶尖部为真金铂包裹木质内心的“金顶”。在微翘的屋檐上覆盖有深绿色琉璃瓦，楼内贴金彩绘，画栋雕梁。基座四面正中各有高约6米的十字相交的券洞，过去是东南西北四条大街交会的通道，人流车辆从券洞通过。随着城市建设的发展，券洞无法适应交通流量需要，而券洞早已封闭。钟楼周围建有公路转盘，地下有专供人行的环行通道。
+</p>
+<p>二.第二陈列室</p>
+<p>漫步在青石小道，碑林风雅的古香古色悠然而来，成千上万的碑石让人目不暇接，忍不住感叹中国古代文化的精深。第一陈列室前是专为陈列修盖的碑亭。是碑林最大的石碑，刻于公元745年，是唐玄宗李隆基亲自书写的《石台孝经》。《孝经》是孔子的学生曾参编纂，专门讲孝道的。</p>
+<p>三.第三陈列室</p>
+<p>第三室的石碑荟萃了历代著名书法家的手迹。秦代李斯的篆书见于《峄山碑》；汉代隶书见于《曹全碑》；东晋王羲之手书见于《大唐三藏圣教碑》，此碑文字是后人从他的遗墨中拼集而成，人称“千金碑”。《唐多宝塔感应碑》留下了唐代颜真卿的楷书；《唐玄宗秘塔碑》留下了柳公权的楷书；《判千家字文》留下了唐代张旭的草书。另有宋代赵佶、黄庭坚，元代赵孟頫，明代董其昌，清代皇帝的书法手迹。从这里可以看出中国文字和书法发展的轨迹。爱好书法的人可以在馆内选购影印的碑贴。</p>
+<p>“市井平常事，最是热闹处”。民俗文化区内——唐市位于园区的南面，由唐集市和戏楼广场组成，面积一万两千零二十二平方米。唐市二期项目，是以古长安城进行贸易、商业活动市集为缩影，以反映唐代“商贾云集、内外通融”的商业文化氛围为核心，集观赏、游乐、消遣、体验、交流、消费为一体的唐朝风俗文化街。</p>
+<p>石刻艺术室</p>
+<p>石刻艺术室和游廊收集了陕西各地的石刻石雕珍品，如东汉的石兽、画象石，唐代的蹲狮、犀牛。驰名中外的《昭陵六骏》有四骏保留在这里。这里陈列的唐代供应石灯十分引人注目，灯分九层，无论造型还是灯案的图案，都十分精美。日本奈良附近通往“春日神社”沿途的石灯就是仿此唐灯所造。此外，还有出土移此的东汉石刻墓门，唐代石椁。石椁阴刻的星相乐舞，仕女图，椁外浮雕彩绘文武侍从和骑龙驾凤仙人，都是历史和艺术珍品。来到碑林，不要忘记这里还有一个高2，5 米、重6 吨的景云大钟。每年除夕之夜，中央电视台发出的钟声就是出自这个巨钟。 为遵循“保护为主、抢救第一、合理利用、加强管理”的文物保护方针，自强不息的“钟楼人”，在保护和合理利用古建筑的同时，抓住其人文景观独特魅力以及已成为西安市重点旅游热点的良好挈机，使其在新时代中发挥着更好的作用。钟楼上成功举办的齐白石画展、明清名人字画展、仿秦乐府编钟表演、于佑任字画、钟楼馆藏文物精品展等大型展览及“晨钟暮鼓”仿古仪仗表演，均受到中外游客的普遍好评和广泛赞誉，在2006年4月份，西安钟楼在“中国最值得外国人去的50个景区”评选活动中获银奖殊荣。</p>
+<div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>门票</p>
+<p> 淡季（12月1日-次年2月底）全票50元/人，半票25元/人 旺季（3月1日-11月底）75元/人，半票37元/人
+</p>
+<p>交通</p>
+<p>  
+可乘坐14路、23路、40路118路、208路、214 路、221 路、223路、 232 路、706路、402路、512路、619路、704路、800路、游6路、五龙专线路公交车到达。
+</p>
+</div> 
+</ul> 
+</div> 
+</div> 
+</div> 
+<div class="con21"> 
+<h3><span>电子地图</span></h3> 
+<h4> 
+<div style="width: 99%; height: 235px; border: 1px solid gray" id="container"></div> 
+
+</h4> 
+</div> 
+<div class="con20"> 
+<h3><span>图集</span></h3> 
+<h4> 
+<a><img src="__PUBLIC__/img/beiling/beiling1.jpg" /></a>
+<a><img src="__PUBLIC__/img/beiling/beiling2.jpg" /></a>
+<a><img src="__PUBLIC__/img/beiling/beiling3.jpg" /></a>
+<a><img src="__PUBLIC__/img/beiling/beiling4.jpg" /></a>
+</h4> 
+
+</div> 
+
+			</div>
+			
+		</div>
+		
+		
+		
+		
+	<include file="List/comment" />	
+	</div>
+
+
+
+
+	
+		
+	
+   <script type="text/javascript"> 
+var map = new BMap.Map("container"); 
+var point = new BMap.Point(108.959087,34.258765); 
+ 
+var marker = new BMap.Marker(point); // 创建标注
+map.centerAndZoom(point, 25); 
+map.addControl(new BMap.NavigationControl()); 
+map.addControl(new BMap.ScaleControl()); 
+map.addControl(new BMap.OverviewMapControl()); 
+//map.addControl(new BMap.MapTypeControl()); 
+map.enableScrollWheelZoom(); 
+map.addOverlay(marker); 
+</script> 
+ <script type="text/javascript">
+    $(function () {
+        $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $animating = false;
+        $('.fixedBtn .top').click(function () {
+            if ($animating == false) {
+                $body.animate({ scrollTop: 0 }, 500);
+                $animating = true;
+            }
+            return false;
+        });
+        $(window).scroll(function () {
+            if ($('.fixedBtn').offset().top > 500) {
+                $('.fixedBtn .top').css('display', 'inline-block');
+            } else {
+                $('.fixedBtn .top').css('display', 'none');
+                $animating = false;
+            }
+        });
+        var fixedBtn = $('.fixedBtn'),
+		feedback = $('.feedback', fixedBtn),
+		feedbackCnt = $('.feedbackCnt'),
+		feedbackTips = $('.feedbackTips', fixedBtn),
+		FBCLASS = 'fb-open',
+		close = function () {
+		    fixedBtn.animate({
+		        right: '-=80'
+		    })
+		    feedbackCnt.removeClass(FBCLASS);
+		},
+		open = function () {
+		    feedbackTips.hide();
+		    feedbackCnt.show();
+		    fixedBtn.animate({
+		        right: '+=80'
+		    });
+		    feedbackCnt.addClass(FBCLASS);
+		};
+        feedback.length && feedback.on('click', function (e) {
+            e.preventDefault();
+            feedbackCnt.hasClass(FBCLASS) ? close() : open();
+        });
+    });
+</script>   
+    </form>
+</body>
+</html>
+
+		

@@ -1,0 +1,54 @@
+
+<!--box-nav-->
+
+<div class="box-nav nav-member">
+    <div class="con-in">
+        <ul class="nav nav-1">
+            <li><a class="main on" href="__ROOT__/index.php/Home/User/index">首页</a></li>
+            
+            <li class="has-nav">
+                <a class="password" href="__ROOT__/index.php/Home/User/cpsw">密码管理</a>
+                <ul class="sub-nav nav-account" style="display: none;">
+                    <li><a href="">修改密码</a></li>
+                    <li><a href="">找回密码</a></li>
+                </ul>
+            </li>
+            <!-- <li><a class="appeal" href="">帐号申诉</a></li> -->
+			<li class="has-nav">
+                <a class="record" href="">消息中心</a>
+               
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="box-nav nav-guest">
+	<div class="con-in">
+		<ul class="nav nav-2">
+			<li><a title="首页" class="main on" href="/">首页</a></li>
+			<li><a title="找回密码" class="password" href="">找回密码</a></li>
+			<li><a title="帐号申诉" class="appeal a-last" href="">帐号申诉</a></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="__ROOT__/Public/js/user/navi.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/user/navi1.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/user/ping.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$('.nav li a.main').addClass('on');
+
+
+
+
+})
+</script>
+<!--/box-nav-->
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+/************login css begin************/
+
+.login_wrap {width:724px;margin:0 auto;border:1px solid #ddd;height:402px;background:#fff;}
+.login_main { width:650px;margin:0 auto;height:100%; background:url('../img/login_bg.jpg') 0 20px no-repeat #fff;}
+.login_ul { float:right;margin-top:80px;width:264px;text-align:left;}
+.login_ul li  { width:100%;color:16px; height:45px; line-height:35px;text-align:left;}
+.login_ul li.username,.login_ul li.password{margin-top:15px;width:100%;}
+#password { background:url('../img/pwtx.jpg') no-repeat 10px 15px #fff;}
+.login_ul li  input {height:45px; line-height:45px;color:#bfbfbf;border:1px solid #bfbfbf;padding-left:10px;width:254px !important;*width:100%;_width:100%;}
+.title { color:#646464;font-size:26px; font-weight:bold;border-bottom:1px solid #bfbfbf;}
+.sumbit {background:url('../img/lg_bn.jpg') no-repeat #fff;margin-top:25px;margin-bottom:10px;cursor:pointer;}
+.forget { color:red; float: right;font-size:14px;}
+.reg { float:left;}
+
+/************login css end************/

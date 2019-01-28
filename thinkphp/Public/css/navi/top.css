@@ -1,0 +1,7 @@
+.logo{ float:left; margin-top:6px;}
+.nav_header{ float:left; height:64px; }
+.nav_header li{ float:left; height:53px; }
+
+.search{ background:url(../images/down.png) center no-repeat;}
+.searchbox{ width:150px; line-height:20px; border:1px #adcff2 solid; height:20px; color:#999; padding-left:4px;}
+.search_news li{ background:url(../images/li.gif) left no-repeat; padding-left:10px; float:left; width:156px; line-height:22px; text-align:left;}

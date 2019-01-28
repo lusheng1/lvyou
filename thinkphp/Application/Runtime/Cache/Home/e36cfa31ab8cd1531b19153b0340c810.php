@@ -1,0 +1,308 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="keywords"  />
+<title>
+	绿友门户网站
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8;IE9" />
+<link href="/thinkphp/Public/css/List/index.css" rel="stylesheet" type="text/css" />
+<link href="/thinkphp/Public/css/List/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.tmailsilder.v2.css" />
+<script type="text/javascript" src="/thinkphp/Public/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.1&services=true"></script>
+<script language="JavaScript">
+    function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6. 
+    {
+        var arVersion = navigator.appVersion.split("MSIE")
+        var version = parseFloat(arVersion[1])
+        if ((version >= 5.5) && (document.body.filters)) {
+            for (var j = 0; j < document.images.length; j++) {
+                var img = document.images[j]
+                var imgName = img.src.toUpperCase()
+                if (imgName.substring(imgName.length - 3, imgName.length) == "PNG") {
+                    var imgID = (img.id) ? "id='" + img.id + "' " : ""
+                    var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+                    var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+                    var imgStyle = "display:inline-block;" + img.style.cssText
+                    if (img.align == "left") imgStyle = "float:left;" + imgStyle
+                    if (img.align == "right") imgStyle = "float:right;" + imgStyle
+                    if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+                    var strNewHTML = "<span " + imgID + imgClass + imgTitle
+             + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+             + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+             + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>"
+                    img.outerHTML = strNewHTML
+                    j = j - 1
+                }
+            }
+        }
+    }
+    window.attachEvent("onload", correctPNG); 
+</script>
+<script language="javascript">
+    function tabChange(obj, id) {
+        var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
+        var arrayul = document.getElementById(id).getElementsByTagName("ul"); //获取ul数组
+        for (i = 0; i < arrayul.length; i++) {
+            if (obj == arrayli[i]) {
+                arrayli[i].className = "cli";
+                arrayul[i].className = "";
+            }
+            else {
+                arrayli[i].className = "";
+                arrayul[i].className = "hidden";
+            }
+        }
+    }
+</script>
+
+<script src="/thinkphp/Public/js/List/jquery.easing.1.3.js" type="text/javascript"></script>
+<link href="/thinkphp/Public/css/List/sexylightbox.css" type="text/css" rel="stylesheet" />
+<script src="/thinkphp/Public/js/List/sexylightbox.v2.3.jquery.js" type="text/javascript"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        SexyLightbox.initialize({ color: 'white', dir: 'images' });
+    });
+</script>
+<script type='text/javascript' src='/thinkphp/Public/js/List/jquery.dcmegamenu.1.3.2.js'></script>
+
+<link rel="stylesheet" href="/thinkphp/Public/css/List/globle_cn.css" type="text/css" /><link rel="stylesheet" href="css/globle_cn_ie6.css" type="text/css" />
+
+
+  <script>
+      $(document).ready(function () {
+
+          $('.nav li').hover(
+		function () {
+		    //show its submenu
+		    $(".menuitempanel", this).slideDown(100);
+		    $("#menuhover", this).addClass("head_hover_bg");
+		    $("#menuhover span", this).addClass("head_hover_bg");
+		},
+		function () {
+		    //hide its submenu
+		    $(".menuitempanel", this).slideUp(100);
+		    $("#menuhover", this).removeClass("head_hover_bg");
+		    $("#menuhover span", this).removeClass("head_hover_bg");
+		}
+	);
+      });
+</script>
+
+
+</head>
+<body>
+ <!--网页导航-->
+        <div class="head-nav">  
+    <div style="padding-top:5px">
+  <link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/Index/common.css">
+  <link rel="stylesheet" type="text/css" href="/thinkphp/Public/css/Index/navi.css">
+ <!--网页导航-->
+        <div class="head-nav">
+            <div class="head-warp">
+                <div style="width:200px;height:85px;position:absolute;margin-left:950px;margin-top:30px;color:white;font-size:16px"><?php echo session('username');?></div>
+				<div style="width:200px;height:85px;position:absolute;margin-left:1050px;margin-top:30px;font-size:16px;cursor:pointer;" ><a href='/thinkphp/index.php/Home/User/logout'style="color:white;">退出</a></div>
+                <div class="nav-body"style="margin-top:0px;">
+                     <a href="/thinkphp/index.php/Home/Index/" url="" target="">首页</a>
+					<a href="/thinkphp/index.php/Home/Navi/" url="" target="">印象关中</a>
+					<a href="/thinkphp/index.php/Home/Navi/fengqing" url="" target="">关中风情</a>
+					<a href="/thinkphp/index.php/Home/Navi/play" target="">玩在关中</a>
+					<a href="/thinkphp/index.php/Home/Navi/road" url="" target="">精品路线</a>
+					<a href="/thinkphp/index.php/Home/Login/">登陆</a>
+					<a href="/thinkphp/index.php/Home/register1/">注册</a>
+					<a href="/thinkphp/index.php/Home/User/"  target="_self">用户中心</a>
+				</div>
+            </div>
+        </div>
+        <!--网页导航 结束-->
+		<script type="text/javascript" src="/thinkphp/Public/js/Index/common.js"></script>
+    
+
+
+    </div>
+      </div>
+        <!--网页导航 结束-->  
+    <form method="post" action="jqjd_xx.aspx?moduleid=92&amp;id=142" id="form1">
+
+<div id="contenter">
+	<div id="main2-2">
+	<div style="margin-top:0px;color:white;font-size:5px">111</div>
+	<div style="border:1px solid rgb(173, 207, 242);padding-left:10px;width:960px;margin:0px auto 10px">
+		
+		<tr>
+          <td width="109" align="left" style="padding-left:8px;"><font class="cu12px">陕西关中</font></td>
+          <td width="849" align="center" style="padding-left:8px;"><font class="cu12px"style="padding-left:250px;"><a href='/thinkphp/index.php/Home/List/bingma' target="_blank">兵马俑</a></font> | <font class="cu12px"><a href='/thinkphp/index.php/Home/List/' target="_blank">太白山</a></font> | <font class="cu12px"><a href='/thinkphp/index.php/Home/List/huashan' target="_blank">华山</a></font> | <font class="cu12px"><a href='/thinkphp/index.php/Home/List/famensi' target="_blank">法门寺</a></font> | <font class="cu12px"><a href='/thinkphp/index.php/Home/List/datang' target="_blank">大唐芙蓉园</a></font> | <font class="cu12px"><a href='/thinkphp/index.php/Home/List/zhonglou' target="_blank">西安钟楼</a></font> | <font class="cu12px"><a href='/thinkphp/index.php/Home/List/yandiling' target="_blank">炎帝陵</a></font>|<font class="cu12px"><a href='/thinkphp/index.php/Home/List/beiling' target="_blank">西安碑林</a></font>|<font class="cu12px"><a href='/thinkphp/index.php/Home/List/jiangzi' target="_blank">姜子牙钓鱼台</a></font></td>
+        </tr>	
+		</div>
+		<div style="margin-left:30px;">
+		<tr>
+    <td width="625" align="left" style="padding-left: 20px;">当前位置：绿友旅游 &gt; 关中之旅 </td>
+    <td width="378" align="right" style="color: rgb(0, 0, 0); padding-right: 25px;">&nbsp;</td>
+  </tr>
+		</div>
+<div class="con18right"> 
+<h3>姜子牙钓鱼台</h3> 
+<ul> 
+<li><span>地址：</span>宝鸡市陈仓区天王镇境内</li> 
+<li><span>门票：</span>180元</li> 
+<li><span>电话：</span>028-83770770</li> 
+</ul> 
+</div> 
+<div class="clear"></div> 
+<div class="con19"> 
+<div class="tabbox"> 
+<div class="tabmenu"> 
+<ul> 
+<li onclick="tabChange(this,'tabcontent')" class="cli" style="cursor:hand">简介</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">景点</li> 
+<li onclick="tabChange(this,'tabcontent')" style="cursor:hand">推荐</li> 
+</ul> 
+</div> 
+<div id="tabcontent"> 
+<ul name="tabul"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>姜子牙钓鱼台风景区是国家AAA级景区，位于宝鸡市陈仓区天王镇境内，南依秦岭，北望渭水，总面积约200平方公里，距西安150公里，宝鸡30公里，二级旅游专线与西宝高速公路、西宝南线相连，交通十分便利。</p>
+<p>景区内人文古迹闻名海内外，名贯古今的“姜子牙钓鱼、周文王访贤”的历史典故就发生在这里，汉代立祠、兴盛唐时的殿堂祠庙随山就势，气势宏伟；巨大如丘的“钓璜灵矶”石；跪痕犹存、被称为中国第一钓台的姜子牙“跪石”及粗需三人合抱的四棵千年“唐柏”更为这内涵深厚的人文古迹锦上添花，给人以知识的熏陶和历史的感悟。[.5公里处，是秦始皇帝陵的一部分陪葬坑，在已发现的三座俑坑里出土了大量的兵马俑。</p>
+<p>钓鱼台自然景色非常迷人，河光山色相映争辉。区内峰峦叠嶂，飞流激注，柏山做屏，芳草为毯，森林茂密，红叶尽染，尤为独特的是绵延十余公里的磻溪峡谷，奇石云集，碧潭相连，小桥曲径，栈道悬空，竹林葱郁，瀑布如练，鸟飞鱼跃，山花烂漫，集奇、险、幽、秀为一体。谷内一山巅，形如一幅巨大的姜太公天然石雕，只见他昂首挺胸，面北而立，身着道袍，后背文卷，长须飘胸，踌躇满志，一幅仙风道骨、济世救民的政治家、军事家的威武形象，惟妙惟肖，令人叹为观止！ </p>
+</div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+<p>景区风景优美</p> 
+<p>阳春山花遍野、盛夏凉爽宜人、秋月红叶烂漫、冬日银装素裹。山水神奇、神工天成。欢迎来这里观光旅游，无论是晨光微熹，还是晚霞西照，无论是风林摇曳，还是花木扶疏，钓鱼台都会是您心中永远的珍藏。
+</p>
+<p>水面达20万平方米的钓鱼台水库，水清晶莹如镜，天光云彩、山色树影，尽收水中。碧水蓝天，红日白云，人行天上，鸟沉水府。泛舟其上，乘兴南游，峰回水转，曲径通幽，两岸奇峰异石，古树怪柏，使人乐趣无穷，流连忘返。
+</p>
+<p>景区内的陕西电视台影视拍摄基地，规模宏大，明星云集，服装道具，琳琅满目，为古老的钓鱼台注入了新的文化景观。</p>
+<div> 
+</ul> 
+<ul class="hidden"> 
+<div style="PADDING-RIGHT:10px;OVERFLOW-Y:auto;PADDING-LEFT:10px;SCROLLBAR-FACE-COLOR:#ffffff;FONT-SIZE:11pt;PADDING-BOTTOM:0px;SCROLLBAR-HIGHLIGHT-COLOR:#ffffff;OVERFLOW:auto;WIDTH:97%;SCROLLBAR-SHADOW-COLOR:#919192;COLOR:blue;SCROLLBAR-3DLIGHT-COLOR:#ffffff;LINE-HEIGHT:100%;SCROLLBAR-ARROW-COLOR:#919192;PADDING-TOP:0px;SCROLLBAR-TRACK-COLOR:#ffffff;FONT-FAMILY:宋体;SCROLLBAR-DARKSHADOW-COLOR:#ffffff;LETTER-SPACING:1pt;HEIGHT:500px;TEXT-ALIGN:left">
+
+<p>交通</p>
+<p>(公共交通：
+
+1、从宝鸡汽车站搭乘发往眉县的班车，在钓鱼台路口下车，打车前往。班车从5:50至18:35，每10分钟一班。
+
+2、从宝鸡汽车站坐车去陈仓区2元，步行到东关，坐开往天王镇的小巴，2.5元到钓鱼台外，然后坐蹦蹦车，3元，到售票口。
+ </p>
+</div> 
+</ul> 
+</div> 
+</div> 
+</div> 
+<div class="con21"> 
+<h3><span>电子地图</span></h3> 
+<h4> 
+<div style="width: 99%; height: 235px; border: 1px solid gray" id="container"></div> 
+
+</h4> 
+</div> 
+<div class="con20"> 
+<h3><span>图集</span></h3> 
+<h4> 
+<a><img src="/thinkphp/Public/img/jiangzi/jiangzi1.jpg" /></a>
+<a><img src="/thinkphp/Public/img/jiangzi/jiangzi2.jpg" /></a>
+<a><img src="/thinkphp/Public/img/jiangzi/jiangzi3.jpg" /></a>
+<a><img src="/thinkphp/Public/img/jiangzi/jiangzi4.jpg" /></a>
+</h4> 
+
+</div> 
+
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		<!-- 多说评论框 start -->
+	<style>
+#ds-thread  {padding:5px;background-color:white;}
+#ds-thread {margin-left:166px;width:1006px;margin-top:10px;}
+
+</style>
+	<div class="ds-thread" data-thread-key="lvyou1" data-title="111111" data-url="请替换成文章的网址"></div>
+
+	<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"lvyoulvyou2015"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->	
+	</div>
+
+
+
+
+	
+		
+	
+   <script type="text/javascript"> 
+var map = new BMap.Map("container"); 
+var point = new BMap.Point(107.440215,34.282228); 
+ 
+var marker = new BMap.Marker(point); // 创建标注
+map.centerAndZoom(point, 25); 
+map.addControl(new BMap.NavigationControl()); 
+map.addControl(new BMap.ScaleControl()); 
+map.addControl(new BMap.OverviewMapControl()); 
+//map.addControl(new BMap.MapTypeControl()); 
+map.enableScrollWheelZoom(); 
+map.addOverlay(marker); 
+</script> 
+ <script type="text/javascript">
+    $(function () {
+        $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $animating = false;
+        $('.fixedBtn .top').click(function () {
+            if ($animating == false) {
+                $body.animate({ scrollTop: 0 }, 500);
+                $animating = true;
+            }
+            return false;
+        });
+        $(window).scroll(function () {
+            if ($('.fixedBtn').offset().top > 500) {
+                $('.fixedBtn .top').css('display', 'inline-block');
+            } else {
+                $('.fixedBtn .top').css('display', 'none');
+                $animating = false;
+            }
+        });
+        var fixedBtn = $('.fixedBtn'),
+		feedback = $('.feedback', fixedBtn),
+		feedbackCnt = $('.feedbackCnt'),
+		feedbackTips = $('.feedbackTips', fixedBtn),
+		FBCLASS = 'fb-open',
+		close = function () {
+		    fixedBtn.animate({
+		        right: '-=80'
+		    })
+		    feedbackCnt.removeClass(FBCLASS);
+		},
+		open = function () {
+		    feedbackTips.hide();
+		    feedbackCnt.show();
+		    fixedBtn.animate({
+		        right: '+=80'
+		    });
+		    feedbackCnt.addClass(FBCLASS);
+		};
+        feedback.length && feedback.on('click', function (e) {
+            e.preventDefault();
+            feedbackCnt.hasClass(FBCLASS) ? close() : open();
+        });
+    });
+</script>   
+    </form>
+</body>
+</html>

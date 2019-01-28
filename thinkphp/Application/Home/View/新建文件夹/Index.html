@@ -1,0 +1,958 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head manifest="anycms.appcache">
+    <meta charset="utf-8">
+
+
+    
+        <title>绿友旅游门户</title>
+    
+
+    
+        
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/Index/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/Index/any.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/Index/common.css">
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/Index/v4home.css">
+
+
+    <style>
+        a[url='/HOME/INDEX/INDEX.HTML']{
+            /*border-bottom: 2px solid #3881FF ;*/
+            background: #3882FF;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+    <![endif]-->
+    <script>
+        (function(){
+            var AnyCms = window.AnyCms = {
+                "ROOT"   : "", //当前网站地址
+                "APP"    : "", //当前项目地址
+                "PUBLIC" : "/Public", //项目公共目录地址
+                "DEEP"   : "/", //PATHINFO分割符
+                "MODEL"  : ["2", "", "html"],
+                "VAR"    : ["m", "c", "a"],
+                "AjaxLoadShare":"http://www.cdlymh.com/Home/Index/ajaxLoadShare.html",
+                "IframeTravelComment": "http://www.cdlymh.com/Home/List/TravelComment.html"
+            }
+        })();
+    </script>
+
+    
+    
+
+
+
+<body>
+<iframe style="display: none;" frameborder="0">
+</iframe><div style="display: block;" id="bdshare_s">
+<iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0">
+</iframe>
+ <div style="display: none;" id="bdshare_m">
+<div id="bdshare_m_c"><h6>分享到</h6><ul><li>
+<a href="#" class="bds_mshare mshare">一键分享</a></li>
+<li><a href="#" class="bds_qzone qqkj">QQ空间</a></li>
+<li><a href="#" class="bds_tsina xlwb">新浪微博</a></li>
+<li><a href="#" class="bds_bdysc bdysc">百度云收藏</a></li>
+<li><a href="#" class="bds_renren rrw">人人网</a></li><li>
+<a href="#" class="bds_tqq txwb">腾讯微博</a></li>
+<li><a href="#" class="bds_bdxc bdxc">百度相册</a></li>
+<li><a href="#" class="bds_more">更多...</a></li>
+</ul><p><a href="#" class="goWebsite">百度分享</a></p></div></div></div> 
+
+    
+    
+
+
+
+    
+        <!--网页导航-->
+        <div class="head-nav">
+            <div class="head-warp">
+                <a href="http://www.cdlymh.com/" class="head-code">成都旅游门户</a>
+                <div class="nav-body">
+                     <a href="" url="" target="_self">首页</a>
+					<a href="" url="" target="_self">推荐景点</a>
+					<a href="" url="" target="_self">论坛中心</a>
+					<a href="http://localhost/thinkphp/index.php/Home/Login/">登陆</a>
+					<a href="http://localhost/thinkphp/index.php/Home/register1/"  ">注册</a>
+					<a href="" url="" target="_self">用户中心</a>
+				</div>
+            </div>
+        </div>
+        <!--网页导航 结束-->
+    
+
+
+
+    
+
+    <!--网页顶部焦点图 -->
+    <div style="width: 1349px; height: 600px;" class="top-focus slider" data-dots="true" data-arrows="true" data-delay="5000" id="top_focus">
+        <!--/Public/Home/img/clear.gif-->
+        <ul style="width: 6745px; height: 600px; margin-left: -4047px;">
+            <li style="width: 1349px; height: 600px;">
+                    <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai16.jpg" alt=""></a>
+                </li><li style="width: 1349px; height: 600px;">
+                    <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai13.jpg" alt=""></a>
+                </li><li style="width: 1349px; height: 600px;">
+                    <a href=""><img style="display: inline;" src="__ROOT__/Public/img/famen/famen1.jpg" alt=""></a>
+                </li><li style="width: 1349px; height: 600px;">
+                    <a href=""><img style="display: inline;" src="__ROOT__/Public/img/yandi/yandi1.jpg" alt=""></a>
+                </li><li style="width: 1349px; height: 600px;">
+                    <a href=""><img style="display: inline;" src="__ROOT__/Public/img/yandi/yandi4.jpg" alt=""></a>
+                </li>        </ul>
+    <div class="arrow prev">←</div><div class="arrow next">→</div><div class="dots"><span class="" i="0">1</span><span class="" i="1">2</span><span class="" i="2">3</span><span class="active" i="3">4</span><span class="" i="4">5</span></div></div>
+    <!--网页顶部焦点图 结束-->
+
+
+    <!--玩在成都标题 -->
+    <div class="in-chengdu-title">
+    <div class="title-body"></div>
+    </div>
+    <!--玩在成都标题 结束-->
+
+    <div class="m_b_20"></div>
+    <!-- 今日关注 -->
+    <div class="v2-day-top">
+
+        <div class="v2-day-top-tools">
+
+            <div class="day-top-dot_arrow">
+                <span class="day-top-prev"></span>
+                <span class="day-top-dots active" i="0">0</span><span class="day-top-dots" i="1">1</span><span class="day-top-dots" i="2">2</span><span class="day-top-dots" i="3">3</span><span class="day-top-dots" i="4">4</span>                <span class="day-top-next"></span>
+            </div>
+
+            <div class="day-top-title">今日推荐</div>
+        </div>
+
+        <div class="slider day-top-slider" data-autoplay="false" data-dots="true" data-arrows="true" data-_prev=".day-top-prev" data-_next=".day-top-next" data-_dots=".day-top-dots" data-delay="5000">
+            <ul style="width: 6050px; height: 340px; margin-left: 0px;" class="m_b">
+                                    <li style="width: 1210px; height: 340px;">
+                        <div class="day-top-warp">
+                            <a class="hot-thumb" href=""><img style="display: block;" src="__ROOT__/Public/img/taibai/taibai18.jpg" alt="全省旅游工作电视电话会议在蓉召开" title="全省旅游工作电视电话会议在蓉召开"></a>
+
+                            <div class="hot-body">
+                                <div class="title"><a href="">国家森林公园，国家AAAA级旅游景区，太白山</a></div>
+                                <div class="intro">
+                                   太白山（Mountain Taibai）主体位于陕西宝鸡眉县、太白县，广义上的太白山连带西安周至县部分。它是秦岭山脉主峰，也是中国大陆青藏高原以东第一高峰。国家森林公园，国家AAAA级旅游景区。太白山是长江和黄河两大水系分水岭。具低山、中山、高山等地貌类型，界限清楚、特点各异，特别是第四纪冰川活动所雕琢的各种地貌形态保留完整、清晰可辨。</div>
+                                <div class="share-bar ">
+                                    <a href="" class="v-detail">查看详情</a>
+
+
+                                    <!-- Baidu Button BEGIN 
+                                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" data="{
+            'desc':'为贯彻落实中央、省委经济工作会议和全国旅游工作会议精神，总结2014年全省旅游工作，研究部署2015年工作,1月23日上午，全省旅游工作电视电话会议在成都召开。省旅游产业发展领导小组副组长、副省长黄彦蓉，省旅游产业发展领导小组副组长、省政府资政张作哈出席主会场会议，省旅游产业发展领导小组成员单位和省直相关部门、单位分管负责人，全省21市(州)旅游局主要负责人，部分涉旅企事业单位负责人参加了主会场会议。全省21市(州)政府分管负责人及有关部门、旅游企事业单位负责人参加了分会场会议。会议由四川省人民政府副秘书长王七章主持。',
+            'text':'全省旅游工作电视电话会议在蓉召开',
+            'title':'全省旅游工作电视电话会议在蓉召开',
+            'pic':'__ROOT__/Public/img/1.jpg',
+            'url':''
+        }">
+                                        <!-- <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+                                        <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+                                        <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+                                        <a href="#" title="分享到人人网" class="bds_renren"></a> 
+                                    </div>
+                                   Baidu Button END -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>                    <li style="width: 1210px; height: 340px;">
+                        <div class="day-top-warp">
+                            <a class="hot-thumb" href=""><img style="display: block;" src="__ROOT__/Public/img/taibai/taibai1.jpg" alt="高山奇湖，拔仙台之南北分布着两个冰斗湖、四个冰蚀湖" title="高山奇湖，拔仙台之南北分布着两个冰斗湖、四个冰蚀湖"></a>
+
+                            <div class="hot-body">
+                                <div class="title"><a href="">高山奇湖，拔仙台之南北分布着两个冰斗湖、四个冰蚀湖</a></div>
+                                <div class="intro">
+                                   玉皇池太白山大爷海太白山大爷海最大，位于拔仙台南坡海拔3380米处。湖面约30亩许，呈圆形似满月。若遇晴朗天气临此，波光鳞鳞，蓝天、白云、山峰俱映湖中，湖光山色十分迷人。 </div>
+                                <div class="share-bar ">
+                                    <a href="" class="v-detail">查看详情</a>
+
+
+                                    <!-- Baidu Button BEGIN 
+                                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" data="{
+            'desc':'1月9日，四川攀枝花三线建设博物馆施工现场一片忙碌，施工人员冒着淅淅沥沥的冬雨加紧工作。目前，四川攀枝花三线建设博物馆已全面进入展陈布展和装饰装修阶段，展陈布展工作已完成80%。',
+            'text':'3月4日 攀枝花三线建设博物馆将正式向公众开放',
+            'title':'3月4日 攀枝花三线建设博物馆将正式向公众开放',
+            'pic':'__ROOT__/Public/img/1.jpg',
+            'url':''
+        }">
+                                       < <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+                                        <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+                                        <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+                                        <a href="#" title="分享到人人网" class="bds_renren"></a> 
+                                    </div>
+                                  Baidu Button END -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>                    <li style="width: 1210px; height: 340px;">
+                        <div class="day-top-warp">
+                            <a class="hot-thumb" href=""><img style="display: block;" src="__ROOT__/Public/img/yandi/yandi4.jpg" alt="“走起，美国！”——2015美国旅游年在蓉启动" title="“走起，美国！”——2015美国旅游年在蓉启动"></a>
+
+                            <div class="hot-body">
+                                <div class="title"><a href="">炎帝陵</a></div>
+                                <div class="intro">
+                                    炎帝部落以宝鸡为中心，沿渭河向四周扩展，向西发展到中原大地，此处土地平坦肥沃，气候湿润，原始农业得到长远的发展。部落开始定居，开始建都陈，再迁往鲁。建都曲阜，后来炎帝部落与南方的蚩尤发生战争，求助于黄帝部落在涿鹿大败蚩尤。                    </div>
+                                <div class="share-bar ">
+                                    <a href="__ROOT__/Public/img/1.jpg" class="v-detail">查看详情</a>
+
+
+                                    <!-- Baidu Button BEGIN 
+                                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" data="{
+            'desc':'美国驻成都总领事馆在来福士广场启动了2015旅游年“走起，美国!”的旅游宣传活动。美国驻成都总领事谷立言总领事、四川省旅游局局长郝康理、成都市旅游局副局长和育东、成都市外事办相关领导参加了此次启动仪式。来自美国旅游行业的多家公司包括航空公司、州旅游局以及四川旅游出境社也在启动仪式上推出了以海岛风情为主题的旅游线路和产品。',
+            'text':'“走起，美国！”——2015美国旅游年在蓉启动',
+            'title':'“走起，美国！”——2015美国旅游年在蓉启动',
+            'pic':'__ROOT__/Public/img/1.jpg',
+            'url':''
+        }">
+                                       <!--  <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+                                        <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+                                        <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+                                        <a href="#" title="分享到人人网" class="bds_renren"></a> 
+                                    </div>
+                                    Baidu Button END -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>                    <li style="width: 1210px; height: 340px;">
+                        <div class="day-top-warp">
+                            <a class="hot-thumb" href=""><img style="display: block;" src="__ROOT__/Public/img/famen/famen4.jpg" alt="春节期间 遂宁将推出51项假日节庆文化活动" title="春节期间 遂宁将推出51项假日节庆文化活动"></a>
+
+                            <div class="hot-body">
+                                <div class="title"><a href="">法门寺</a></div>
+                                <div class="intro">
+                                    　法门寺（Famen Temple）位于炎帝故里、青铜器之乡——宝鸡市，2004年被联合国教科文组织评为“世界第九大奇迹”，全国重点文物保护单位。                                </div>
+                                <div class="share-bar ">
+                                    <a href="" class="v-detail">查看详情</a>
+
+
+                                    <!-- Baidu Button BEGIN 
+                                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" data="{
+            'desc':'　节日将近，年味渐浓。富有地方特色、接地气聚人气、群众喜闻乐见的春节文化活动将在遂宁精彩上演。据了解，春节期间，全市共组织51场文化活动，其中，市城区已组织19场，5个区县将组织32场，“可口”的文化盛宴，让市民在春节期间不出家门照样玩个够。',
+            'text':'春节期间 遂宁将推出51项假日节庆文化活动',
+            'title':'春节期间 遂宁将推出51项假日节庆文化活动',
+            'pic':'__ROOT__/Public/img/1.jpg',
+            'url':''
+        }">
+                                       <!--  <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+                                        <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+                                        <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+                                        <a href="#" title="分享到人人网" class="bds_renren"></a> 
+                                    </div>
+                                     Baidu Button END -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>                    <li style="width: 1210px; height: 340px;">
+                        <div class="day-top-warp">
+                            <a class="hot-thumb" href=""><img style="display: block;" src="__ROOT__/Public/img/famen/famen12.jpg" alt="成都市区30分钟可到新机场 三种交通方式供选择" title="成都市区30分钟可到新机场 三种交通方式供选择"></a>
+
+                            <div class="hot-body">
+                                <div class="title"><a href="">法门寺</a></div>
+                                <div class="intro">
+                                    法门寺被誉为皇家寺庙，因安置释迦牟尼佛指骨舍利而成为举国仰望的佛教圣地。法门寺佛塔被誉为“护国真身宝塔”。寺庙所在的法门寺文化景区为国家AAAAA级旅游景区。                                </div>
+                                <div class="share-bar ">
+                                    <a href="" class="v-detail">查看详情</a>
+
+
+                                    <!-- Baidu Button BEGIN 
+                                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare" data="{
+            'desc':'成都新机场获批后，通往机场的路网如何构建备受社会关注。1月19日，记者从成都市交委获悉，根据已经获得四川省政府批复的《成都新机场场外综合交通规划(2014-2040年)》，前往位于简阳市芦葭镇的成都新机场，未来将有高速公路、城际铁路、城市轨道交通等三种出行选择，实现从成都中心城区、天府新区至新机场30分钟左右可达的目标。',
+            'text':'成都市区30分钟可到新机场 三种交通方式供选择',
+            'title':'成都市区30分钟可到新机场 三种交通方式供选择',
+            'pic':'/Api/Attach/show/file/28500bce343575c3694cdeed44781df5.jpg',
+            'url':'http://www.cdlymh.com/Home/Show/news/item/2838.html'
+        }">
+                                        <!-- <a href="#" title="分享到QQ空间" class="bds_qzone"></a>
+                                        <a href="#" title="分享到新浪微博" class="bds_tsina"></a>
+                                        <a href="#" title="分享到腾讯微博" class="bds_tqq"></a>
+                                        <a href="#" title="分享到人人网" class="bds_renren"></a> 
+                                    </div>
+                                  Baidu Button END -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- 今日关注 结束 -->
+
+    <!--高端访谈
+    <div class="m m_b m_b_20 interview">
+        <a href="" class="more"></a>
+        <div class="interview_logo"></div>
+        <div class="warp">
+                            <div class="iv-item">
+                    <a class="iv-thumb" href=""><img style="display: inline;" src="/Api/Attach/show/file/1784ae470f53adc17aa9516555ec68e2/w/125/h/95/thumb/3.jpg" alt="中央电视台《乡土》栏目走进米易" title="中央电视台《乡土》栏目走进米易"></a>
+
+                    <div class="iv-body">
+                        <div class="title"><a href="">中央电视台《乡土》栏目走进米易</a></div>
+                        <div class="intro">
+                            　　近日，中央电视台《乡土》栏目组走进米易县新山傈僳族乡，就傈僳族民俗文化及非物质文化遗产项目进行专...                        </div>
+                    </div>
+                </div>                <div class="iv-item">
+                    <a class="iv-thumb" href=""><img style="display: inline;" src="/Api/Attach/show/file/3483723467e36f48821fc03a8fec1a74/w/125/h/95/thumb/3.jpg" alt="喜报：旅游年会 四川大放异彩" title="喜报：旅游年会 四川大放异彩"></a>
+
+                    <div class="iv-body">
+                        <div class="title"><a href="">喜报：旅游年会 四川大放异彩</a></div>
+                        <div class="intro">
+                            1月13-14日，第四届中国旅游产业发展年会在江西南昌召开，全国旅游业界近600名业界大咖参与了此次...                        </div>
+                    </div>
+                </div>        </div>
+    </div>
+   高端访谈 结束 -->
+
+
+    <!-- 在成都 -->
+
+    <!--导航-->
+    <div class="in-chengdu-head">
+      
+        <div class="in-chengdu-logo"></div>
+
+        <div class="in-chengdu-type in-cd-chi" i="0"></div>
+        <div class="in-chengdu-type in-cd-zhu" i="1"></div>
+        <div class="in-chengdu-type in-cd-xing" i="2"></div>
+        <div class="in-chengdu-type in-cd-you" i="3"></div>
+        <div class="in-chengdu-type in-cd-gou" i="4"></div>
+        <div class="in-chengdu-type in-cd-yu active" i="5"></div>
+
+
+        <div class="in-chengdu-thumb"></div>
+
+    </div>
+    <!--导航结束-->
+<!--内容开始-->
+        <div class="slider v2-doc-body" data-autoplay="false" data-_dots=".in-chengdu-type" data-dots="true" data-dots_event="mouseover">
+            <ul style="width: 7260px; height: 380px; margin-left: -6050px;">
+                <li style="width: 1210px; height: 380px;">
+                        <div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2782.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/565fa425f2ca1f76114c4476746bbfba/w/245/h/165/thumb/3.jpg" alt="【四川好玩】麻辣四川，食在天府">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2782.html" class="v2-dov-title">【四川好玩】麻辣四川，食在天府</a>
+                                <p class="v2-doc-intro">饮德食和，万邦同乐。中华美馔，莫妙于川。
+
+在中国（或许在世界上），没有任何一个地方的人比四川人更爱吃。四川人对食物的专注、追逐和兴趣喂养着“川菜”从秦砖汉瓦的高堂正厅之畔伴随着袅袅炊烟，绵绵不绝地飘到了今天。如今，对泱泱九千万的四川人而言，口福就是幸福的一大部分，饮食是一座最容易兑现的天堂。川菜浓郁的味道和深厚的历史积淀浸透在川人的血液里，随着他们飘游的身影向四方散逸。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2782.html" class="doc-detail-icon">【四川好玩】麻辣四川，食在天府</a>                                 发布日期: 2014-12-24                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2721.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/881cdaed2c6d020b8ef517ce8be848c0/w/245/h/165/thumb/3.jpg" alt="成都旅游门户推荐：钟水饺的做法">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2721.html" class="v2-dov-title">成都旅游门户推荐：钟水饺的做法</a>
+                                <p class="v2-doc-intro">在成都一说起水饺，大家就马上想到钟水饺，作为小吃中很有名的一种，钟水饺的制作工艺很讲究，皮薄馅多加上独特的调料，这让成都钟水饺享誉全国。下面小编为大家介绍钟水饺的做法，有兴趣就来看看吧！成都旅游门户为您推荐钟水饺的做法</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2721.html" class="doc-detail-icon">成都旅游门户推荐：钟水饺的做法</a>                                 发布日期: 2014-12-03                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2720.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/c90a90e7fbbb4505041d67cf84e3c7c9/w/245/h/165/thumb/3.jpg" alt="成都旅游门户为您推荐：五色汤圆的做法">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2720.html" class="v2-dov-title">成都旅游门户为您推荐：五色汤圆的做法</a>
+                                <p class="v2-doc-intro">汤圆象征着和谐，是中国传统的美食，具有合家团圆的意思。汤圆的种类也越来越多，今天为大家介绍的就是五彩汤圆的做法。成都旅游门户为您推荐五色汤圆的做法</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2720.html" class="doc-detail-icon">成都旅游门户为您推荐：五色汤圆的做法</a>                                 发布日期: 2014-12-03                                </div>
+                            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2719.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/43fcc6ea191676d81865843445683aba/w/245/h/165/thumb/3.jpg" alt="成都旅游门户推荐：?糖油果子的做法">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2719.html" class="v2-dov-title">成都旅游门户推荐：?糖油果子的做法</a>
+                                <p class="v2-doc-intro">成都小吃糖油果子，这是到成都的游客都要吃的。利用糯米、红糖、芝麻制作而成，通过油炸制成。在成都大街小巷都可以看到。香甜的口感也是很多小朋友很喜欢的味道。成都旅游门户为您推荐：?糖油果子的做法</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2719.html" class="doc-detail-icon">成都旅游门户推荐：?糖油果子的做法</a>                                 发布日期: 2014-12-03                                </div>
+                            </div>                    </li><li style="width: 1210px; height: 380px;">
+                        <div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2759.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/a35868503cb2e5fbf7b084b7b1080e75/w/245/h/165/thumb/3.jpg" alt="成都旅游门户推荐：天府丽都喜来登饭店">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2759.html" class="v2-dov-title">成都旅游门户推荐：天府丽都喜来登饭店</a>
+                                <p class="v2-doc-intro">天府丽都喜来登饭店地处市中心商务及金融区黄金地段，拥有各类豪华客房和套房，包括高级间、豪华间、套房、行政楼层房间、大使套房、总统套房及喜达屋优先顾客房，还设有不吸烟楼层和残疾人房。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2759.html" class="doc-detail-icon">成都旅游门户推荐：天府丽都喜来登饭店</a>                                 发布日期: 2014-12-18                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2726.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/39ee2baf7f03540107e6cd66ea228106/w/245/h/165/thumb/3.jpg" alt="成都旅游门户推荐：成都总府皇冠假日酒店">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2726.html" class="v2-dov-title">成都旅游门户推荐：成都总府皇冠假日酒店</a>
+                                <p class="v2-doc-intro">成都总府皇冠假日酒店位于成都市中心商务区，地理位置优越，交通便利，紧邻“春熙路”时尚商业圈，更是与时代广场、中环广场、城市之心、川信大厦等众多商务楼宇毗邻而立。从酒店漫步10分钟即可到达天府广场及天府广场地铁1号线，前往火车北站或火车东站均只需20分钟车程，距双流国际机场约40分钟车程。无论选择出租车或地铁，都能快捷的抵达位于城南的新国际会展中心和高新科技园区。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2726.html" class="doc-detail-icon">成都旅游门户推荐：成都总府皇冠假日酒店</a>                                 发布日期: 2014-12-04                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2725.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/1dea1abcfe19704b738d94e158a07acd/w/245/h/165/thumb/3.JPG" alt="成都旅游门户推荐：成都万达大饭店">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2725.html" class="v2-dov-title">成都旅游门户推荐：成都万达大饭店</a>
+                                <p class="v2-doc-intro">成都索菲特万达大饭店坐落于美丽的锦江河畔，位于一环内城市最繁华地段，毗邻天府广场，春熙路，省市政府和商业中心，步行可至著名景区武侯祠和锦里。成都地铁一号线已开通，饭店离锦江宾馆地铁站只有五分钟路程，让您的出游更加便利。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2725.html" class="doc-detail-icon">成都旅游门户推荐：成都万达大饭店</a>                                 发布日期: 2014-12-04                                </div>
+                            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2724.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/5896759be25d2f96e3e30952855f21de/w/245/h/165/thumb/3.jpg" alt="成都旅游门户推荐： 成都凯宾斯基饭店">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2724.html" class="v2-dov-title">成都旅游门户推荐： 成都凯宾斯基饭店</a>
+                                <p class="v2-doc-intro">成都凯宾斯基饭店坐落于成都市发展迅速的城南繁华地区，毗邻成都国际展览中心、外贸出口加工区，距世界知名的熊猫研究基地也只有30分钟车程。   这座25层高的现代化豪华饭店是成都市最新的标志性建筑。拥有各类豪华客房，其中包括一套豪华总统套房，两层行政楼层，一个行政酒廊以及三层无烟楼层。每间客房布置陈设高雅，面积由34平方米至230平方米不等，咖啡及茶冲泡工具、房内保险箱及迷你酒吧。客房浴室装饰、设施豪华，拥有独立的多功能淋浴装置。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2724.html" class="doc-detail-icon">成都旅游门户推荐： 成都凯宾斯基饭店</a>                                 发布日期: 2014-12-04                                </div>
+                            </div>                    </li><li style="width: 1210px; height: 380px;">
+                        <div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2775.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/dea59773ecda4fe111ae433baea9c78f/w/245/h/165/thumb/3.jpg" alt="?印度旅游推介会在蓉举行 赴印签证24小时可取">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2775.html" class="v2-dov-title">?印度旅游推介会在蓉举行 赴印签证24小时可取</a>
+                                <p class="v2-doc-intro">今(19)日下午，“2014中印友好交流年”之“印度掠影”成都站系列活动“2014中国(成都)?印度旅游推介会”在成都举行。现场四川新闻网记者了解到，如果材料准备齐全，赴印签证可在24小时内拿到。同时，印度驻广州总领馆也表示，印度非常安全，赴印旅游时不要有顾虑。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2775.html" class="doc-detail-icon">?印度旅游推介会在蓉举行 赴印签证24小时可取</a>                                 发布日期: 2014-12-22                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2774.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/a0a7dddf40a7c802d25922a1614c0b2b/w/245/h/165/thumb/3.jpg" alt="成都飞三亚每天再增一班 去海南晒太阳更方便了">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2774.html" class="v2-dov-title">成都飞三亚每天再增一班 去海南晒太阳更方便了</a>
+                                <p class="v2-doc-intro">成都直飞三亚、济南等地将又多了一个选择。昨(19)日，记者从祥鹏航空获悉，该航空公司将于下周分别新开通成都至三亚、成都至济南航线，其中至三亚每天一班，至济南每周三班。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2774.html" class="doc-detail-icon">成都飞三亚每天再增一班 去海南晒太阳更方便了</a>                                 发布日期: 2014-12-22                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2772.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/d480bcc1ffdf553f070fed2af474df7d/w/245/h/165/thumb/3.jpg" alt="春节成都旅游攻略之交通篇">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2772.html" class="v2-dov-title">春节成都旅游攻略之交通篇</a>
+                                <p class="v2-doc-intro">2015春节快来了，让小编给你整理成都交通，让你出行有伴更方便</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2772.html" class="doc-detail-icon">春节成都旅游攻略之交通篇</a>                                 发布日期: 2014-12-22                                </div>
+                            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/419.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/6125ed7f88aef30aa6c7fe94922fb3e9/w/245/h/165/thumb/3.jpg" alt="安岳旅游客运线路">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/419.html" class="v2-dov-title">安岳旅游客运线路</a>
+                                <p class="v2-doc-intro"></p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/419.html" class="doc-detail-icon">安岳旅游客运线路</a>                                 发布日期: 2012-05-17                                </div>
+                            </div>                    </li><li style="width: 1210px; height: 380px;">
+                        <div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2781.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/09bec0edc2deca7283f43671dd1f0078/w/245/h/165/thumb/3.jpg" alt="【四川好玩】天府之神，和平共处">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2781.html" class="v2-dov-title">【四川好玩】天府之神，和平共处</a>
+                                <p class="v2-doc-intro">与世隔绝的横山纵岭在川西坝子的四周向苍天祈福，为世代栖居在重峦叠嶂中的各族民众寻找一份平安与生活的温暖。在明清两代汉族文化大规模深入蜀中腹地之前，来自各种原生宗教的意识形态弥漫在底层劳动人民身上。宗教自然而然地渗透到了每个人的生活。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2781.html" class="doc-detail-icon">【四川好玩】天府之神，和平共处</a>                                 发布日期: 2014-12-24                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2767.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/4be172758c860dff0af8a3df02cefa27/w/245/h/165/thumb/3.jpg" alt="“春熙坊”收官 游客就近体验“老成都”巷子文化">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2767.html" class="v2-dov-title">“春熙坊”收官 游客就近体验“老成都”巷子文化</a>
+                                <p class="v2-doc-intro">作为成都历史文化新地标，“春熙坊老成都三条巷”位于成都市春熙商圈,一直以体现、体验 “老成都文化”为核心，真实还原三百年前老成都传奇的聚集地“昌福馆街”。今天上午,“老成都上三条巷”正式开巷,意味着在成都以“穿越文化”、“古董巷子文化”为代表的“春熙坊”立体打造宣告完成,最终时尚与传统融汇一体的“春熙坊”完美呈现, “体验老成都巷子文化,感受穿越之旅”的老成都本土文化，将进一步传递给外来游客。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2767.html" class="doc-detail-icon">“春熙坊”收官 游客就近体验“老成都”巷子文化</a>                                 发布日期: 2014-12-22                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2757.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/f4e3ea35474ebde46330928f4488968d/w/245/h/165/thumb/3.jpg" alt="北较场古城墙今昔">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2757.html" class="v2-dov-title">北较场古城墙今昔</a>
+                                <p class="v2-doc-intro">《华阳新志》称成都古城墙“楼观壮丽，城郭完固”，“冠于西南”，“不亚于京师”。但岁月沧桑，而今成都市遗存的古城墙只有北较场、中同仁路、成都制约厂一厂、西较场、滨江东路北侧等处了，总长度不足千米。其中，尤以北较场的古城墙保护较完好，长度最长，规模最大。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2757.html" class="doc-detail-icon">北较场古城墙今昔</a>                                 发布日期: 2014-12-16                                </div>
+                            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2755.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/e024e661b3cd6501d82f66ef0425e7ff/w/245/h/165/thumb/3.jpg" alt="唐代胜迹——合江亭">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2755.html" class="v2-dov-title">唐代胜迹——合江亭</a>
+                                <p class="v2-doc-intro">今成都府河、南河，从城北、城南穿城而过，在安顺桥与九眼桥之间交汇向东流去。两河汇流处，矗立着一座美丽的彩亭，它就是唐代著名胜迹——合江亭。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2755.html" class="doc-detail-icon">唐代胜迹——合江亭</a>                                 发布日期: 2014-12-16                                </div>
+                            </div>                    </li><li style="width: 1210px; height: 380px;">
+                        <div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2760.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/9dd71fd3fe22cf9ed3263e267b632f62/w/245/h/165/thumb/3.jpg" alt="成都旅游门户推荐：成都旅游商品精品集">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2760.html" class="v2-dov-title">成都旅游门户推荐：成都旅游商品精品集</a>
+                                <p class="v2-doc-intro">成都旅游门户特别推荐：四川旅游文化特产汇总精品集，只有你想不到。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2760.html" class="doc-detail-icon">成都旅游门户推荐：成都旅游商品精品集</a>                                 发布日期: 2014-12-18                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/233.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/378884f4974e6c08c6cd5211f66ad70f/w/245/h/165/thumb/3.jpg" alt="摩尔百盛">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/233.html" class="v2-dov-title">摩尔百盛</a>
+                                <p class="v2-doc-intro">区域： 档次： 类型： 综合商店 简介： 成都摩尔百盛是马来西亚金狮百盛集团管理的知名大型商业零售企业。公司成立以来，秉承正直诚实、全心投入、顾客导向、团队精神之理念，以卓有成效的专业化经营，为消费者提供</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/233.html" class="doc-detail-icon">摩尔百盛</a>                                 发布日期: 2012-01-16                                </div>
+                            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/231.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/2a1c1af5f4b8a3e4557b19b0f9c199ef/w/245/h/165/thumb/3.jpg" alt="仁和春天">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/231.html" class="v2-dov-title">仁和春天</a>
+                                <p class="v2-doc-intro">区域： 四川省.成都市.成都市 档次： 类型： 未定类型 / 简介： 享受春天，让我们更年轻（Enjoy spring and being younger）春天之所以被永恒的歌颂，是因为一切都是年轻的、萌芽的、蓄势待发的这是个想象力充斥的季</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/231.html" class="doc-detail-icon">仁和春天</a>                                 发布日期: 2012-01-16                                </div>
+                            </div>                    </li><li style="width: 1210px; height: 380px;">
+                        <div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2828.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/3e3646955a7bc15718137396ee012350/w/245/h/165/thumb/3.jpg" alt="一秋一站式宠物公园登陆蓉城">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2828.html" class="v2-dov-title">一秋一站式宠物公园登陆蓉城</a>
+                                <p class="v2-doc-intro">2015年1月10日起，成都市神仙树紫薇东路88号对于广大市民及宠物来说，将会是一个神奇的所在：在这里，西南地区具有地标意义的一站式综合宠物服务会所——“一秋宠物公园”正式与广大市民及宠物们见面。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2828.html" class="doc-detail-icon">一秋一站式宠物公园登陆蓉城</a>                                 发布日期: 2015-01-13                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2783.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/a3191a123785416b00328b53bf8e3c36/w/245/h/165/thumb/3.jpg" alt="【四川好玩】四川人，盆地客">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2783.html" class="v2-dov-title">【四川好玩】四川人，盆地客</a>
+                                <p class="v2-doc-intro">他们深受传统文化的熏陶，温文尔雅但城府深，坚韧能干而因循守旧；他们洞达细心，从不放弃丰富多彩的闲情逸趣，但他们稍欠气象恢弘的王者之气、纵横江湖的霸气，即使偶露峥嵘，更多的是自卫而已。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2783.html" class="doc-detail-icon">【四川好玩】四川人，盆地客</a>                                 发布日期: 2014-12-24                                </div>
+                            </div><div class="v2-doc-item  m_b" style="">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2769.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/2302b15268806e4df325d117818a55ac/w/245/h/165/thumb/3.jpg" alt="2015成都春节天气 2015成都春节天气预报">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2769.html" class="v2-dov-title">2015成都春节天气 2015成都春节天气预报</a>
+                                <p class="v2-doc-intro">　　不知不觉，马上就到了2015春节了，2015年春节成都天气如何呢?2015年春节成都去哪玩?2015春节去成都好玩吗?下面跟随小编来看看2015年春节成都天气及2015年春节成都好玩的地方吧!</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2769.html" class="doc-detail-icon">2015成都春节天气 2015成都春节天气预报</a>                                 发布日期: 2014-12-22                                </div>
+                            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2768.html" class="v2-doc-thumb">
+                                    <img style="display: inline;" src="/Api/Attach/show/file/8f4d446225be97faf9647f880b8d2a36/w/245/h/165/thumb/3.jpg" alt="成都：百只“熊猫”空降街头">
+                                </a>
+
+                                <a href="http://www.cdlymh.com/Home/Show/doc/item/2768.html" class="v2-dov-title">成都：百只“熊猫”空降街头</a>
+                                <p class="v2-doc-intro">12月19日，近百只萌态百出、造型各异的“熊猫”空降成都府青路街头，为即将来临的新春增添喜气色彩。据介绍，这些大熊猫皆为纯手工打造，身上的彩绘也是手工喷涂。</p>
+
+                                <div>
+                                    <a href="http://www.cdlymh.com/Home/Show/doc/item/2768.html" class="doc-detail-icon">成都：百只“熊猫”空降街头</a>                                 发布日期: 2014-12-22                                </div>
+                            </div>                    </li>            </ul>
+
+        </div>
+        <!--内容结束 -->
+        
+
+
+
+
+    <div class="cen_focus" id="cen_focus">
+            <!--单张图片 开始-->
+        <a href="" style="display: block;background:url(__ROOT__/Public/img/1.jpg) no-repeat center  ;width: 100%;height: 310px;"></a>
+    <!--单张图片 结束-->    </div>
+    <div class="in-chengdu-title lvyou">
+        <div class="day-top-title" style="margin-top:20px;margin-left:80px;">发现新美景</div>
+    </div>
+
+
+
+
+
+    <div class="ly-chengdu-body">
+	
+        <!--发现新美景-->
+        <div class="v2-cat-box v2-beauty">
+            <div class="sanjiao"></div>
+            <div class="v2-cat_thumb-box" data-_dots=".v2-beauty .dots .box-dots" data-dots="true" data-autoplay="false" data-dots_event="mouseover">
+                <ul style="width: 1925px; height: 235px; margin-left: 0px;">
+                                        <li style="width: 385px; height: 235px;">
+                        <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai2.jpg" alt=""></a>
+                    </li>                    <li style="width: 385px; height: 235px;">
+                        <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai4.jpg" alt=""></a>
+                    </li>                    <li style="width: 385px; height: 235px;">
+                        <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai5.jpg" alt=""></a>
+                    </li>                    <li style="width: 385px; height: 235px;">
+                        <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai17.jpg" alt=""></a>
+                    </li>                    <li style="width: 385px; height: 235px;">
+                        <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai14.jpg" alt=""></a>
+                    </li>                </ul>
+
+                <div class="beauty-icon"></div>
+                <div class="dots"><span class="box-dots active" i="0">0</span><span class="box-dots" i="1">1</span><span class="box-dots" i="2">2</span><span class="box-dots" i="3">3</span><span class="box-dots" i="4">4</span></div>
+            </div>
+
+            <div class="v2-cat_content-box">
+                <ul>
+                                            <li style="display: list-item;">
+                            <a href="">看山要看极高山 太白积雪6月天</a>
+                            <p>“太白积雪六月天”是关中八景之一：
+在过去那寒冷多雪的年代里巍巍高峰，终年积雪、银光四射，百里可见，故“太白积雪六月天”之奇观胜景则由此而来。由于气候逐渐变暖，兼之冬季降雪减少，盛夏又多出现伏旱高温炎热天气。因而“太白积雪六月天”的胜景现已很难看到了。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">云海奇观</a>
+                            <p>　太白山千峰竞秀，万壑藏云。在海拔2000米以上的地方，可看到极其壮观的云海，以平安寺为最。平安寺地处海拔2700米的山梁上，周围群峰耸立拱峙，
+势若围屏，山峰间沟壑宽阔，深邃莫测。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">高山奇湖</a>
+                            <p>太白海位于拔仙台南坡海拔3380米处，呈圆形，湖面13.8亩。晴朗之时，湖水清澈如镜，冰凉沁人心脾，湖光山色，令人陶醉。多雨季节湖水满溢，沿谷乘奔驭风而下，鸣声震耳，遐迩可闻。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">冰川遗址</a>
+                            <p> 该区在海拔3000米以上至太白山顶峰，第四纪冰川地貌形态较清晰、保存较完整。该区第四纪冰川地貌遗留下来的部分，按冰川作用的类型分冰蚀地貌和冰碛地貌。 </p>
+                        </li>                        <li style="display: none;">
+                            <a href="">拔仙绝顶</a>
+                            <p>　拔仙台是太白山最高巅，从下向上望去，峰顶庙
+拜仙台拜仙台
+宇凌空，锷刺蓝天，李白有“举手可近月”之形象比喻。然而攀上去，却另是一番景象，台面开阔平坦，向西直通跑马梁，站上拔仙台极目远眺，果真是“会当临绝顶，一览群山小”。</p>
+                        </li>                </ul>
+            </div>
+
+        </div>
+        <!--发现新美景 结束 -->
+
+
+
+
+
+        <!--人文成都-->
+        <div class="v2-cat-box v2-culturals">
+            <div class="sanjiao"></div>
+            <div class="v2-cat_content-box">
+                
+                <ul>
+                                            <li style="display: list-item;">
+                            <a href="">真身宝塔</a>
+                            <p>真身宝塔因塔下藏有佛祖真身舍利而得名，初为“圣冢”，唐代建四级木塔，明代改建砖塔。此塔见于典籍记载，均称其为“古塔四层”、“木塔四层”，金人称其“三级风檐压鲁地，九盘轮相壮秦川”。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">法门寺地宫</a>
+                            <p>法门寺唐代地宫于1987年发现，是世界上发现时代最久远、规模最大、等级最高的佛塔地宫。地宫所保存的大批文物，不仅等级高，品种多，有的甚至完好如初。是研究唐代政治、经济、文化、宗教等多种学科提供了实物证据，对中国文化史和世界文化史都具有重要的意义。法门寺地宫文物代表了唐文化的金字塔尖。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">法门寺博物馆</a>
+                            <p>法门寺博物馆又称法门寺珍宝馆，陈列大厅设在珍宝阁二、三层内。设有陈列《法门寺出土文物展》，展出文物160多件，全部是地宫出土的文物精品，为唐皇室文物精华的集群性陈列，另外还在地宫设有《地宫珍宝展》。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">法门寺合十舍利塔</a>
+                            <p>法门寺合十舍利塔始建于2004年，由台湾著名建筑设计大师李祖原策划设计。塔高148米，呈双手合十状，中间有安放佛指舍利的宝塔型建筑，塔内供奉着举世闻名的佛祖释迦牟尼真身舍利。舍利塔总投资超过五十亿人民币。总建筑面积为76690平方米，其中地上为60225平方米，地下约为16465平方米。2009年3月29日，佛教圣地法门寺合十舍利塔落成。2009年5月9日举行佛指舍利安奉大典。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">佛光大道</a>
+                            <p>佛光大道长1230米，宽108米，1代表这里供奉着世界上唯一释迦摩尼指骨舍利，2代表新旧两座宝塔，3就是代表佛法僧三宝的设计规划，而0就是万物一切所有的众生。而108呢，比如说法师手持的念珠就是108颗，每拨去一颗佛珠就代表看破放下一种烦恼。</p>
+                        </li>                </ul>
+
+                <div class="dots"><span class="box-dots active" i="0">0</span><span class="box-dots" i="1">1</span><span class="box-dots" i="2">2</span><span class="box-dots" i="3">3</span><span class="box-dots" i="4">4</span></div>
+            </div>
+
+
+            <div class="v2-cat_thumb-box" data-_dots=".v2-culturals .v2-cat_content-box .dots .box-dots" data-dots="true" data-autoplay="false" data-dots_event="mouseover">
+                <ul style="width: 1925px; height: 235px; margin-left: 0px;">
+                                            <li style="width: 385px; height: 235px;">
+                            <a href=""><img style="display: inline;" src="__ROOT__/Public/img/famen/famen11.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img style="display: inline;" src="__ROOT__/Public/img/famen/famen4.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img style="display: inline;" src="__ROOT__/Public/img/famen/famen15.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img style="display: inline;" src="__ROOT__/Public/img/famen/famen5.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img style="display: inline;" src="__ROOT__/Public/img/famen/famen16.jpg" alt=""></a>
+                        </li>                </ul>
+
+
+
+            </div>
+
+
+
+        </div>
+        <!--人文成都 结束 -->
+
+
+
+
+
+
+
+        <!--生态旅游-->
+        <div class="v2-cat-box v2-ecotourism">
+            <div class="sanjiao"></div>
+            <div class="v2-cat_thumb-box" data-_dots=".v2-ecotourism .dots .box-dots" data-dots="true" data-autoplay="false" data-dots_event="mouseover">
+                <ul style="width: 1925px; height: 235px; margin-left: 0px;">
+                                            <li style="width: 385px; height: 235px;">
+                            <a href=""><img src="__ROOT__/Public/img/yandi/yandi2.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img src="__ROOT__/Public/img/yandi/yandi3.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img src="__ROOT__/Public/img/yandi/yandi6.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img src="__ROOT__/Public/img/yandi/yandi5.jpg" alt=""></a>
+                        </li>                        <li style="width: 385px; height: 235px;">
+                            <a href=""><img src="__ROOT__/Public/img/yandi/yandi7.jpg" alt=""></a>
+                        </li>                </ul>
+
+                <div class="ecotourisms-icon"></div>
+                <div class="dots"><span class="box-dots active" i="0">0</span><span class="box-dots" i="1">1</span><span class="box-dots" i="2">2</span><span class="box-dots" i="3">3</span><span class="box-dots" i="4">4</span></div>
+            </div>
+
+            <div class="v2-cat_content-box">
+                <ul>
+                                            <li style="display: list-item;">
+                            <a href="">陵前区</a>
+                            <p>陵前区从姜城堡地区至天台山入口的蒙峪建有多处古式牌坊，上书"炎帝故里"、"神农之乡"、"神农门"、"人杰地灵"等。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">祭祀区</a>
+                            <p>进入山门，即进入祭祀区，沿百米台阶而上，来到陵台，陵台处为山门，门外竖立一块石碑，上刻"常羊山"三个大字，为著名书法家吴三大的手迹。
+登上山顶，便到了仰首亭，亭内和亭旁各有一块清代碑石，碑上刻有"常养育炎"和"山海镇 "，其中后者为清嘉庆三年重修城池的遗石。 </p>
+                        </li>                        <li style="display: none;">
+                            <a href="">炎帝庙</a>
+                            <p>炎帝庙，大殿面阔5间，左右两边的对联为书法家茹桂所书"创始定有人千载歧黄崇炎帝，流传安天据八方稼穑念神农"，表达了对炎帝的崇敬之情。殿前为祭祀广场，可容纳千人祭祀。广场两侧分别建有鼓亭和钟亭。正殿面积400平方米，高12米，为清式庑殿。殿堂正中为炎帝座像，像高4.5米，目光炯炯，庄重慈祥。殿内两侧壁上分别绘有有关炎帝的大型壁画，分别为常羊育炎、浴圣九龙、农业之神、太阳之神、医药之神、炎帝结盟，讲述了炎帝的生平和功绩。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">墓冢区</a>
+                            <p>沿着长长的陵道拾级而上，两边塑立着百代帝王石像，总共16位，依历史顺序依次排列为：尧、舜、禹、启、夏桀、成汤、盘庚、纣王、周文王、周武王、周幽王、周平王、郑庄公、齐桓公、秦穆公、宋襄公等。</p>
+                        </li>                        <li style="display: none;">
+                            <a href="">炎帝陵</a>
+                            <p>这里就是炎黄子孙拜谒先祖的圣地。"炎帝陵"三字飘逸洒脱，为全国书协名誉主席启功所题。</p>
+                        </li>                </ul>
+            </div>
+
+        </div>
+        <!--生态旅游 结束 -->
+
+
+        <div class="c_b"></div>
+
+
+
+
+
+
+        <div class="lines-box">
+            <div class="lines-focus">
+                <a href=""><img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai19.jpg" alt=""></a>
+            </div>
+            <div class="top-lines">
+                <div class="line-icon"></div>
+                <div class="item">
+                            [自驾线路]
+                            <a href="">太白山北坡登山路线</a>
+                        </div><div class="item">
+                            [自驾线路]
+                            <a href="">太白山南坡登山路线</a>
+                        </div><div class="item">
+                            [自驾线路]
+                            <a href="">炎帝陵路主要景区</a>
+                        </div><div class="item">
+                            [自驾线路]
+                            <a href="">法门寺主要景区</a>
+                        </div>            </div>
+        </div>
+
+
+
+
+
+
+        <div class="video">
+            <div class="video-icon"></div>
+            <div>
+                    <a href="">
+                        <img style="display: inline;" src="__ROOT__/Public/img/famen/famen13.jpg" alt="">
+                    </a>
+                </div>
+                       </div>
+
+
+
+        <div class="c_b"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--好玩四川 -->
+
+    <div class="v2-sichuan">
+	
+        <div class="v2-doc-item  m_b" style="">
+                                <a href="" class="v2-doc-thumb">
+                    <img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai19.jpg" alt="中央电视台《乡土》栏目走进米易">
+                </a>
+
+                <a href="" class="v2-dov-title">到达路线</a>
+                <p class="v2-doc-intro">西安火山站乘坐旅游专线到达　
+</p>
+
+                <div>
+                    <a href="" class="doc-detail-icon">中央电视台《乡土》栏目走进米易</a>                                 发布日期: 2015-01-21                </div>
+            </div><div class="v2-doc-item  m_b" style="">
+                                <a href="" class="v2-doc-thumb">
+                    <img style="display: inline;" src="__ROOT__/Public/img/taibai/taibai12.jpg" alt="喜报：旅游年会 四川大放异彩">
+                </a>
+
+                <a href="" class="v2-dov-title">登山线路</a>
+                <p class="v2-doc-intro">1、北坡登山路线<br/>今登太白山，北从眉县营头入山，经自然保护区经营管理局，上行至响水石，再上行至蛟龙寺（多有乌梢蛇，故名）。再上行至黑虎关，再上至蒿坪寺，再上至刘家崖，南行至钟山寺。再西南行至下白云，与从太白县鹦鸽乡柴胡山村登山路线合。<br>
+				2、北坡登山路线:<br/>从太白县黄柏塬镇经偏桥子至曹家河坝北向入龙洞沟上行10公里许至太白庙，海拔1960米。庙成残垣，铁像3尊、钟1口、罄1口。
+				</p>
+
+                <div>
+                    <a href="" class="doc-detail-icon">喜报：旅游年会 四川大放异彩</a>                                 发布日期: 2015-01-20                </div>
+            </div><div class="v2-doc-item  m_b" style="">
+                                <a href="" class="v2-doc-thumb">
+                    <img style="display: inline;" src="__ROOT__/Public/img/famen/famen9.jpg" alt="四川简阳第十一届羊肉美食旅游节隆重开幕">
+                </a>
+
+                <a href="" class="v2-dov-title">到达路线</a>
+                <p class="v2-doc-intro">
+				由宝鸡市区坐公交车抵达。
+				</p>
+
+                <div>
+                    <a href="" class="doc-detail-icon">四川简阳第十一届羊肉美食旅游节隆重开幕</a>                                 发布日期: 2014-12-22                </div>
+            </div><div class="v2-doc-item  m_b" style="margin-right:0">
+                                <a href="" class="v2-doc-thumb">
+                    <img style="display: inline;" src="__ROOT__/Public/img/famen/famen3.jpg" alt="西岭雪山吃火锅坝坝宴 成都食客就是这么任性">
+                </a>
+
+                <a href="" class="v2-dov-title">到达路线</a>
+                <p class="v2-doc-intro">1、 宝鸡长途汽车站到扶风的高速车。<br/>
+				2、 西安——法门寺景区线路：<br/>
+				游2（西安火车站——法门寺）（每日3班次）
+				城西客运站线路 （西安城西客运站——法门寺院）</p>
+
+                <div>
+                    <a href="" class="doc-detail-icon">西岭雪山吃火锅坝坝宴 成都食客就是这么任性</a>                                 发布日期: 2014-12-22                </div>
+            </div>    </div>
+    <!--好玩四川 结束 -->
+
+    <div class=""></div>
+
+
+<br>
+
+
+
+
+
+
+
+    
+    <div class="footer">
+        <div class="m links">
+            <notempay name="links">
+                        </notempay>
+            <div class="c_b"> </div>
+        </div>
+        <div class="m copyright">
+            Copyright ? 2011 CDLYMH 成都旅游门户 Powered by Anysoft   &nbsp; 蜀ICP备10208912号 <script src="http://www.cdlymh.com/Api/Js/topNameBar/0/rand/1/1422454454.js"></script><a href="http://www.cdlymh.com/Home/Account/register/callback/aHR0cDovL3d3dy5jZGx5bWguY29tL0hvbWUvSW5kZXgvaW5kZXguaHRtbA%3D%3D.html" class="reg">注册</a> / <a href="#LoginModal" data-toggle="modal" class="login">登录</a><div id="LoginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel" style="color: #333333">用户登录</h3></div><div class="modal-body"><div style="width: 230px; margin: 0 auto; padding: 50px;"><iframe style="width: 0px; height: 0px;" src="http://www.cdlymh.com/Home/Account/account_login/frawurl/aHR0cDovL3d3dy5jZGx5bWguY29tL0hvbWUvSW5kZXgvaW5kZXguaHRtbA%3D%3D.html" frameborder="0"></iframe></div></div></div>
+        </div>
+    </div>
+    
+<script type="text/javascript" src="__ROOT__/Public/js/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="__ROOT__/Public/js/Index/bootstrap.js"></script>
+
+<script type="text/javascript" src="__ROOT__/Public/js/Index/slide.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/Index/layer.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/Index/common.js"></script>
+    
+    <script>
+        $(function(){
+            $("#top_focus").slider({arrows:true,fluid:true});
+            $(window).resize(_resize);
+            _resize();
+
+
+            //发现新美景
+
+            $(".v2-cat_thumb-box").slider({oncomplete:function(){
+                //alert(this.i);
+                $(".v2-cat_content-box>ul>li",this.ele.parent() ).fadeOut(0);
+                $(".v2-cat_content-box>ul>li",this.ele.parent() ).eq(this.i).fadeIn(500);
+            }});
+ }) ;
+        function _resize(){
+            $("#top_focus").width( $(window).width()>1200?$(window).width():1200 );
+            $("#top_focus").height( 600);
+        }
+    </script>
+
+
+    <script src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=395127" type="text/javascript" id="bdshare_js" data="type=tools&amp;mini=3"></script>
+    
+    <script type="text/javascript">
+        /**
+         * 在这里定义bds_config
+         */
+        var bds_config = {"bdStyle":"2"};
+
+        document.getElementById('bdshell_js').src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+    </script>
+    <!-- Baidu Button END -->
+
+
+
+
+
+
+<div class="album-body" style="display: none;"><div class="album-commend-box"><iframe id="share_comment" src="" style="width: 100%;height: 100%;" frameborder="0" height="100%" width="100%"></iframe></div><div class="album-photos-box"><div class="album-photo-box"></div><div class="arrow prev" onclick="photo_slider(-1)">←</div><div class="arrow next" onclick="photo_slider(1)">←</div></div></div>
+</body>
+</html>

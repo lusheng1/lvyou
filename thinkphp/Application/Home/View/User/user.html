@@ -1,0 +1,124 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>绿友旅游门户网站</title>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><!--fix：多核浏览器兼容模式下jQuery误判导致表单检测插件bug-->
+
+  <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/user/style.css">
+  <link rel="stylesheet" type="text/css" href="__ROOT__/Public/css/user/reset.css">
+  <script type="text/javascript" src="__ROOT__/Public/js/jquery-1.11.0.min.js"></script>
+   
+</head>
+
+<body style="background-color:white">
+<!--网页导航-->
+        <div class="head-nav">  
+    <div style="padding-top:5px">
+<include file="Public/navi" />
+
+
+    </div>
+      </div>
+        <!--网页导航 结束-->  
+<div id="wrap" style="margin-top:100px;">
+  <div id="wrapTop">
+    <div id="wrapBtm"> 
+     <include file="User/navi" />  
+			
+
+
+<!--div#content-->
+<div class="clearfix" id="content">
+	<div id="center-home" class="con-in">
+		<!--cha-side-->
+		<div class="side-cha b-side-cha">
+			<!--box-info-->
+			<div id="side-login">
+			<div class="box-info info-box">
+			<div style="background: none repeat scroll 0 0 #3882ff;color: #ffffff;font-size: 16px;height: 50zzpx;line-height: 30px;text-align: center;width: 150px;margin-top:20px;margin-left:50px;">最近10次登陆</div> 
+				<table width="900px" border="0" cellspacing="0" cellpadding="0" style="margin:6px auto;" class="tdTab">
+				 <tr style="border-bottom:solid 1px #00afff;border-top:solid 1px #00afff">
+                              <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black; ">用户登陆邮箱</font></a></td>
+                              
+                              <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black">登录时间</font></a></td>
+                              
+                              <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black">登陆ip</font></a></td>
+							  <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black;text-align:center;">登陆地点</font></a></td>
+							  
+                              </tr>
+							  <volist name="user" id="vo" >
+                        <tr style="border-bottom:solid 1px #00afff;border-top:solid 1px #00afff">
+                              <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black">{$vo.id}</font></a></td>
+                              
+                              <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black">{$vo.logintime}</font></a></td>
+                              
+                              <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black">{$vo.loginip}</font></a></td>
+							  <td width="200px" height="50px" bgcolor=""style="border-left:solid 1px #00afff;border-right:solid 1px #00afff;text-align:center;"><a> <font class="black">{$vo.country}</font></a></td>
+							  
+                              </tr>
+                              </volist>
+                        </table>
+						
+				</div>
+							</div>
+			</div>
+			<!--/box-info-->
+			<!--faq-->
+			
+			<!--/faq-->
+		</div>
+		<!--/cha-side-->
+		<!--main-->
+		
+		<!--/main-->
+	</div>
+	
+</div>
+<!--/div#content--> 
+
+<div style="display:none">	
+<!--弹窗表单-->
+<!--dialog-req-form-->
+			
+		
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+</body>
+ <script type="text/javascript" src="__ROOT__/Public/js/user/navi.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/js/user/navi1.js"></script>
+
+</html> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
